@@ -1,0 +1,11 @@
+<div class="container">
+    <h2>Your people...</h2>
+    <div>
+        <ul>
+            <li ng-repeat="person in people | filter:query | orderBy:orderProp">
+                <div class="col-md-6">{{person.firstName}} {{person.lastName}}</div>
+                <div class="col-md-6"><button class="btn btn-default" ng-click="open(person.id)">Edit</button></div>
+            </li>
+        </ul>
+    </div>
+</div>

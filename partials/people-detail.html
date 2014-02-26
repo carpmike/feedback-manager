@@ -1,0 +1,13 @@
+<div class="modal-header">
+    <h3>Edit your peep...</h3>
+</div>
+<div class='details'>
+	<form novalidate>
+        First name: <input type="text" name="firstName" ng-model="person.firstName" required /><br/>
+        Last name: <input type="text" name="lastName" ng-model="person.lastName" required /><br/>
+    </form>
+</div>
+<div class="modal-footer">
+    <button class="btn btn-primary" ng-click="ok()">OK</button>
+    <button class="btn btn-warning" ng-click="cancel()">Cancel</button>
+</div>

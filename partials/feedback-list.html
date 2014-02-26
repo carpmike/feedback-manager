@@ -1,0 +1,33 @@
+<div class="container">
+	<h2>Feedback for your people...</h2>
+    <div>
+        <table>
+            <tbody>
+                <tr>
+                    <th>Name</th>
+                    <th>Type</th>
+                    <th>Category</th>
+                    <th>Text</th>
+                    <th>Date</th>
+                </tr>
+                <tr ng-repeat="fb in feedback | filter:query | orderBy:orderProp">
+                    <td>
+                        {{fb.person.firstName}} {{fb.person.lastName}}
+                    </td>
+                    <td>
+                        {{fb.feedbackType.name}}
+                    </td>
+                    <td>
+                        {{fb.category.name}}
+                    </td>
+                    <td>
+                        {{fb.text}}
+                    </td>
+                    <td>
+                        {{fb.date}}
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

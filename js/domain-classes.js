@@ -23,7 +23,7 @@ angular.module('myApp.domainClasses', [])
         var people = {
             // returns a promise to get the people
             getPeople: function() {
-                var peoplePromise = $http.get(fbURL + '/persons', { timeout: to })
+                var peoplePromise = $http.get(fbURL + '/persons?max=50', { timeout: to })
                     .then(function(results){
                         //Success;
                         console.log("Success: " + results.status);
@@ -37,14 +37,28 @@ angular.module('myApp.domainClasses', [])
                 return peoplePromise;
             },
             savePerson: function(person) {
-                var personPromise = $http.put(fbURL + '/persons/' + person.id, person, { timeout: to })
-                    .success(function(results){
-                        //success;
-                        console.log("Success: " + results.status);
-                    }).error(function(results, status){
-                        //error
-                        alert("Failed to save feedback. HTTP status: " + status);
-                    });
+                var personPromise;
+                if (person.id) {
+                    personPromise = $http.put(fbURL + '/persons/' + person.id, person, { timeout: to })
+                        .success(function(results){
+                            console.log("Success: " + results.status);
+                            return results.data; 
+                        }).error(function(results, status){
+                            alert("Failed to update person " + person.firstName + " " + person.lastName + ". HTTP status: " + status);
+                            return results.data; 
+                        });
+                } else {
+                    personPromise = $http.post(fbURL + '/persons', person, { timeout: to })
+                        .success(function(results){
+                            console.log("Success: " + results.status);
+                            return results.data; 
+                        }).error(function(results, status){
+                            alert("Failed to save person " + person.firstName + " " + person.lastName + ". HTTP status: " + status);
+                            return results.data; 
+                        });
+                }
+
+                return personPromise;
             }
         };
 

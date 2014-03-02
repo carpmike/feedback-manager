@@ -1,25 +1,49 @@
-<div class="topcoat-navigation-bar">
-    <div class="topcoat-navigation-bar__item center full">
-        <h1 class="topcoat-navigation-bar__title">Feedback for {{person.firstName}} {{person.lastName}}</h1>
+<div>
+    <div class="row">
+        <div class="col-sm-offset-1 col-sm-7">
+            <h3>Edit your feedback for {{fb.person.firstName}} {{fb.person.lastName}}</h3>
+        </div>
+        <div class="col-sm-4 bottom">
+            <a href="#" ng-click="returnToList()" class="btn btn-default btn-sm active" role="button">Back to feedback list</a>
+        </div>
     </div>
-</div>
-<div class="center">
-    <form novalidate>
-        <div class="left half">
-            <p>Date:</p>
-            <p>Feedback Type:</p>
-            <p>Category:</p>
-            <p>Notes:</p>
-        </div>
-        <div class="right half">
-            <p><datepicker ng-model="fb.date" date-format="MM/dd/yyyy" disable-timepicker="true" required></datepicker></p>
-            <p><select class="topcoat-text-input" ng-model="fb.feedbackType" ng-options="f.name for f in feedbackTypes" required></select></p>
-            <p>Category: <select class="topcoat-text-input" ng-model="fb.category" ng-options="c as c.name for c in categories" required></select></p>
-            <p>Notes: <textarea class="topcoat-textarea" placeholder="Feedback notes..." rows="6" cols="50" ng-model="fb.text" ></textarea></p>
-        </div>
-        <p>
-            <button class="topcoat-button" ng-click="reset()" ng-disabled="isUnchanged(fb)">RESET</button>
-            <button class="topcoat-button" ng-click="save(fb)" ng-disabled="isUnchanged(fb)">SAVE</button>
-        </p>
-    </form>
+    <div id="feedback-form-div" class="container">
+        <form id="feedback-form" class="form-horizontal" role="form" novalidate>
+            <div class="form-group">
+                <label for="feedbackDate" class="col-sm-2 control-label">Date</label>
+                <div class="col-sm-8">
+                    <p class="input-group">
+                      <input id="feedbackDate" type="text" class="form-control" datepicker-popup="dd-MMMM-yyyy" ng-model="fb.date" is-open="opened" ng-required="true" close-text="Close" />
+                      <span class="input-group-btn">
+                        <button class="btn btn-default" ng-click="open($event)"><i class="glyphicon glyphicon-calendar"></i></button>
+                      </span>
+                    </p>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="feedbackType" class="col-sm-2 control-label">Feedback Type</label>
+                <div class="col-sm-8">
+                    <select id="feedbackType" class="form-control" ng-model="fb.feedbackType" ng-options="f.name for f in feedbackTypes" required></select>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="feedbackCategory" class="col-sm-2 control-label">Category</label>
+                <div class="col-sm-8">
+                    <select id="feedbackCategory" class="form-control" ng-model="fb.category" ng-options="c as c.name for c in categories" required></select>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="feedbackNotes" class="col-sm-2 control-label">Notes</label>
+                <div class="col-sm-8">
+                    <textarea id="feedbackNotes" class="form-control" placeholder="Feedback notes..." rows="6" ng-model="fb.text" ></textarea>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-sm-2 col-sm-offset-9">
+                    <!-- <button class="btn btn-warning" ng-click="reset()" ng-disabled="isUnchanged(fb)">Reset</button> -->
+                    <button class="btn btn-primary" ng-click="save(fb)" ng-disabled="isUnchanged(fb)">Save</button>
+                </div>
+            </div>
+        </form>
+    </div>
 </div>

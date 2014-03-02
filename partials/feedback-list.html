@@ -1,5 +1,5 @@
 <div class="container">
-	<h2>Feedback for your people...</h2>
+	<h3>Feedback for your people...</h3>
     <div>
         <table>
             <tbody>
@@ -9,6 +9,7 @@
                     <th>Category</th>
                     <th>Text</th>
                     <th>Date</th>
+                    <th>Action</th>
                 </tr>
                 <tr ng-repeat="fb in feedback | filter:query | orderBy:orderProp">
                     <td>
@@ -25,6 +26,9 @@
                     </td>
                     <td>
                         {{fb.date}}
+                    </td>
+                    <td>
+                        <button class="btn btn-default btn-sm" ng-click="edit(fb.id)">Edit</button>
                     </td>
                 </tr>
             </tbody>

@@ -5,6 +5,7 @@ var app = angular.module('myApp', [
     'ngRoute',
     'ngAnimate',
     'ui.bootstrap',
+    'http-auth-interceptor',
     'myApp.domainClasses',
     'myApp.controllers'
 ]);

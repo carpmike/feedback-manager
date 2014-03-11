@@ -1,0 +1,745 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"th",
+				"thead	Tag"
+			],
+			[
+				"margin",
+				"margin-bottom"
+			],
+			[
+				"list-",
+				"list-n	list-style-type: none;"
+			],
+			[
+				"cate",
+				"categories"
+			],
+			[
+				"back",
+				"background-color"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "js/domain-classes.js",
+			"settings":
+			{
+				"buffer_size": 6287,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "js/auth.js",
+			"settings":
+			{
+				"buffer_size": 3851,
+				"line_ending": "Windows",
+				"name": "/*global angular:true, browser:true */"
+			}
+		},
+		{
+			"contents": "var services = angular.module('myApp.services', ['$httpProvider']);\n",
+			"file": "js/services.js",
+			"file_size": 0,
+			"file_write_time": 130387658907819470,
+			"settings":
+			{
+				"buffer_size": 68,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "js/app.js",
+			"settings":
+			{
+				"buffer_size": 795,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "index.html",
+			"settings":
+			{
+				"buffer_size": 1964,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "js/controllers.js",
+			"settings":
+			{
+				"buffer_size": 6294,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "partials/login-form.html",
+			"settings":
+			{
+				"buffer_size": 961,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "partials/people-detail.html",
+			"settings":
+			{
+				"buffer_size": 946,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "css/styles.css",
+			"settings":
+			{
+				"buffer_size": 224,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "partials/feedback-list.html",
+			"settings":
+			{
+				"buffer_size": 1192,
+				"line_ending": "Windows"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 311.0,
+		"selected_items":
+		[
+			[
+				"Package Control: ",
+				"Package Control: List Packages"
+			],
+			[
+				"",
+				"File: New View into File"
+			],
+			[
+				"snippet",
+				"Snippet: html"
+			],
+			[
+				"snippet for",
+				"Snippet: for (…) {…}"
+			],
+			[
+				"snippe",
+				"Snippet: html"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"view",
+				"View: Toggle Open Files in Side Bar"
+			]
+		],
+		"width": 400.0
+	},
+	"console":
+	{
+		"height": 125.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/C/Working/Projects/mine/RallyDataRetriever/src/rally/RallyBatchCycleTimeRetriever.groovy",
+		"/C/Working/Projects/mine/RallyDataRetriever/src/rally/RallyAdminConsoleCycleTimeRetriever.groovy",
+		"/C/Working/Projects/mine/feedback-manager/partials/people-detail.html",
+		"/C/Working/Projects/mine/feedback-manager/js/app.js",
+		"/C/Working/Projects/mine/feedback-manager/index.html",
+		"/C/Working/Projects/mine/feedback-manager/js/controllers.js",
+		"/C/Working/Projects/mine/feedback-manager/js/domain-classes.js",
+		"/C/Working/Projects/mine/feedback-manager/css/styles.css",
+		"/C/Working/Projects/mine/feedback-manager/partials/people-list.html",
+		"/C/Working/Projects/mine/feedback-manager/partials/feedback-form.html",
+		"/C/Working/Projects/mine/feedback-manager/partials/feedback-list.html",
+		"/C/Working/Projects/mine/feedback/www/js/app.js",
+		"/C/Working/Projects/mine/feedback/www/index.html",
+		"/C/Working/Projects/mine/feedback/www/js/controllers.js",
+		"/C/Working/Projects/mine/feedback-manager/topcoat/css/topcoat-desktop-light.css",
+		"/C/Working/Projects/mine/Responsive_HTML5_Tutorial_by_Lingulo_com/index.html",
+		"/C/Working/Projects/mine/Responsive_HTML5_Tutorial_by_Lingulo_com/css/style.css",
+		"/C/Working/Projects/mine/responsive_tut/reset.css",
+		"/C/Working/Projects/mine/responsive_tut/modernizr.js",
+		"/C/Working/Projects/mine/responsive_tut/style.css",
+		"/C/Working/Projects/mine/responsive_tut/index.html",
+		"/C/Working/Web/APIs/Respond-master/src/respond.js",
+		"/C/Working/Projects/mine/feedback/www/partials/feedback-notification.html",
+		"/C/Working/Web/APIs/topcoat-0.8.0/demo/index.html",
+		"/C/Working/Projects/mine/feedback-manager/js/rest-services.js",
+		"/C/tmp/BootStrap.groovy",
+		"/C/Working/Projects/mine/feedback/www/js/rest-services.js",
+		"/C/Working/Projects/mine/feedback/www/partials/feedback-type.html",
+		"/c/Working/Scripting/batch/mycmd.bat",
+		"/C/Working/Projects/mine/feedback-manager/mongoose.conf",
+		"/c/Working/Projects/mine/RallyDataRetriever/src/rally/RallyAdminConsoleCycleTimeRetriever.groovy",
+		"/C/Working/Projects/mine/AngularJS-Routing/index.htm",
+		"/C/Working/Projects/mine/AngularJS-Routing/assets/app/main.js",
+		"/C/Working/Projects/mine/AngularJS-Routing/assets/app/controllers/app-controller.js",
+		"/c/Working/Projects/mine/AngularJS-Routing/index.htm",
+		"/C/Working/Projects/mine/feedback/www/partials/people.html",
+		"/C/Working/Projects/mine/feedback/www/js/domain-classes.js",
+		"/C/Users/mcarpenter/AppData/Roaming/Sublime Text 2/Packages/User/Preferences.sublime-settings",
+		"/C/Working/Projects/mine/feedback/www/partials/feedback-categories.html",
+		"/C/Working/Projects/mine/feedback/www/js/index.js",
+		"/C/Working/Projects/mine/feedback/www/partials/person-list.html",
+		"/C/Working/Projects/mine/feedback/www/partials/feedback-choose.html",
+		"/C/Working/Projects/mine/ang-dir/www/js/memory-services.js",
+		"/C/Working/Projects/mine/feedback/www/partials/employee-list.html",
+		"/C/Working/Projects/mine/feedback/www/js/memory-services.js",
+		"/C/Working/Projects/mine/feedback/www/config.xml",
+		"/C/Working/Projects/mine/angular-directory/client/js/controllers.js",
+		"/C/Working/Projects/mine/angular-directory/client/js/rest-services.js",
+		"/C/Working/Projects/mine/helloworld/grails-app/controllers/helloworld/HelloController.groovy",
+		"/c/Working/Projects/mine/tmp/feedback-web/grails-app/conf/Config.groovy",
+		"/C/Working/Projects/mine/feedback-web/grails-app/conf/DataSource.groovy",
+		"/C/Working/Projects/mine/feedback-web/grails-app/conf/BootStrap.groovy",
+		"/C/Working/Projects/mine/feedback-web/grails-app/conf/BuildConfig.groovy",
+		"/C/Working/Projects/mine/feedback-web/grails-app/conf/ApplicationResources.groovy",
+		"/C/Working/Projects/mine/feedback-web/application.properties",
+		"/C/Working/Projects/mine/feedback-web/.classpath",
+		"/C/Working/Projects/mine/angular-directory/client/index.html",
+		"/C/Working/Projects/mine/angular-directory/client/js/app.js",
+		"/C/Working/Projects/mine/MyAngularPhoneGapProject/www/index.html",
+		"/C/Working/Projects/mine/angular-directory/client/js/memory-services.js",
+		"/C/Working/Projects/mine/pgAng/www/index.html",
+		"/C/Working/Projects/mine/pgAng/www/config.xml",
+		"/C/Working/Projects/mine/pgAng/www/js/app.js",
+		"/C/Working/Projects/mine/pgAng/www/js/controllers.js",
+		"/C/Working/Projects/mine/ang-dir/www/index.html",
+		"/C/Working/Projects/mine/ang-dir/www/config.xml",
+		"/c/Working/Projects/mine/phonegap-start/www/config.xml",
+		"/c/Working/Projects/mine/ang-dir/.gitignore",
+		"/C/Working/Projects/mine/ang-dir/www/js/index.js",
+		"/C/Working/Projects/mine/ang-dir/www/js/app.js",
+		"/C/Working/Projects/mine/ang-dir/www/js/controllers.js",
+		"/C/Working/Projects/mine/seedgap/test/lib/angular/angular-mocks.js",
+		"/C/Working/Projects/mine/seedgap/scripts/test.bat",
+		"/C/Working/Projects/mine/seedgap/config/karma.conf.js",
+		"/C/Working/Projects/mine/seedgap/www/lib/angular/angular-animate.js",
+		"/C/Working/Projects/mine/seedgap/www/lib/angular/angular-animate.min.js",
+		"/C/Working/Projects/mine/angular-directory/client/partials/employee-list.html",
+		"/C/Working/Projects/mine/angular-directory/client/partials/employee-detail.html",
+		"/C/Working/Projects/mine/seedgap/www/js/index.js",
+		"/C/Working/Projects/mine/angular-directory/client/css/styles.css",
+		"/C/Working/Projects/mine/angular-directory/client/partials/report-list.html",
+		"/C/Working/Projects/mine/angular-phonecat/app/index.html",
+		"/C/Working/Projects/mine/angular-phonecat/app/phones/phones.json",
+		"/C/Working/Projects/mine/angular-phonecat/app/js/controllers.js",
+		"/C/Working/Projects/mine/angular-phonecat/app/js/services.js",
+		"/C/Working/Projects/mine/angular-phonecat/app/partials/phone-detail.html",
+		"/C/Working/Projects/mine/angular-phonecat/test/unit/filtersSpec.js",
+		"/C/Working/Projects/mine/angular-phonecat/app/js/app.js",
+		"/C/Working/Projects/mine/angular-phonecat/app/partials/phone-list.html",
+		"/C/Working/Projects/mine/angular-phonecat/test/unit/controllersSpec.js",
+		"/C/Working/Projects/mine/angular-phonecat/test/e2e/scenarios.js",
+		"/C/Working/Projects/mine/angular-phonecat/app/js/filters.js",
+		"/C/Working/Projects/mine/angular-phonecat/app/phones/dell-streak-7.json",
+		"/C/Users/mcarpenter/Desktop/GRF.java",
+		"/C/Users/mcarpenter/Desktop/eckr.osq",
+		"/C/Users/mcarpenter/Desktop/echk.osq",
+		"/C/Working/Projects/mine/angular-phonecat/app/css/bootstrap.css",
+		"/C/Working/Projects/mine/angular-phonecat/app/css/app.css",
+		"/C/Working/Projects/mine/phonegap-tutorial/tutorial-files/step4/js/index.js",
+		"/C/Users/mcarpenter/Desktop/commprocess.java",
+		"/C/Users/mcarpenter/Desktop/commence.java",
+		"/C/Users/mcarpenter/Desktop/rallyExcel - Copy.xml",
+		"/C/Working/Projects/mine/phonegap-tutorial/phonegap-start-master/phonegap-start-master/www/config.xml",
+		"/C/Users/mcarpenter/AppData/Roaming/Rally/ExcelAddIn/rallyExcel.xml",
+		"/C/Working/Projects/mine/sitter/web-app/js/sitter.js",
+		"/C/Working/Projects/mine/sitter/web-app/js/test.html",
+		"/C/Working/Projects/mine/sitter/web-app/css/main.css",
+		"/C/Working/Projects/mine/sitter/.groovy/suggestions.xdsl",
+		"/C/Users/mcarpenter/AppData/Roaming/Sublime Text 2/Packages/Default/Preferences.sublime-settings"
+	],
+	"find":
+	{
+		"height": 37.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+			"C:\\Working\\Projects\\mine\\ang-dir"
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": true,
+		"find_history":
+		[
+			"testUser",
+			"wrtDate",
+			"alert",
+			"changePath",
+			"$scope.master",
+			"timeout: 2000",
+			"center",
+			"categories",
+			"people",
+			"feedback",
+			"$log",
+			"getPromise",
+			"persons",
+			"employee",
+			"Employee",
+			"employee",
+			"Employee",
+			"employees",
+			"\");\n",
+			"employees",
+			"employee",
+			"employees",
+			"Employee",
+			"mongo",
+			"client/",
+			"app/",
+			"user_priv",
+			"update",
+			"into",
+			"from",
+			"rdp",
+			"\n	",
+			"\");\n",
+			"Mike",
+			";\n",
+			"Ajax",
+			"var"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"adminUser",
+			"timeout: to",
+			"feedbackTypes",
+			"categories",
+			"fb",
+			"peoplePromise",
+			"people",
+			"person",
+			"people",
+			"People",
+			"people",
+			"People",
+			"people",
+			"person",
+			"erson",
+			"person",
+			"Person",
+			"www/"
+		],
+		"reverse": true,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 1,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "js/domain-classes.js",
+					"settings":
+					{
+						"buffer_size": 6287,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								5401,
+								5401
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "js/auth.js",
+					"settings":
+					{
+						"buffer_size": 3851,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1263,
+								1263
+							]
+						],
+						"settings":
+						{
+							"auto_name": "/*global angular:true, browser:true */",
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 252.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "js/services.js",
+					"settings":
+					{
+						"buffer_size": 68,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								68,
+								68
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "js/app.js",
+					"settings":
+					{
+						"buffer_size": 795,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								146,
+								146
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "index.html",
+					"settings":
+					{
+						"buffer_size": 1964,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								975,
+								975
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/AngularJS/AngularJS.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "js/controllers.js",
+					"settings":
+					{
+						"buffer_size": 6294,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1624,
+								1624
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "partials/login-form.html",
+					"settings":
+					{
+						"buffer_size": 961,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								26,
+								26
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/AngularJS/AngularJS.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "partials/people-detail.html",
+					"settings":
+					{
+						"buffer_size": 946,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/AngularJS/AngularJS.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "css/styles.css",
+					"settings":
+					{
+						"buffer_size": 224,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								224,
+								224
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS/CSS.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 101.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 9,
+					"file": "partials/feedback-list.html",
+					"settings":
+					{
+						"buffer_size": 1192,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1192,
+								1192
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/AngularJS/AngularJS.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 34.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"replace":
+	{
+		"height": 62.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+			[
+				"index.js",
+				"www/js/index.js"
+			],
+			[
+				"confi",
+				"www/config.xml"
+			],
+			[
+				"index",
+				"www/js/index.js"
+			],
+			[
+				"inde",
+				"www/index.html"
+			],
+			[
+				"main.css",
+				"web-app/css/main.css"
+			],
+			[
+				".css",
+				"web-app/css/main.css"
+			],
+			[
+				".js",
+				"web-app/js/sitter.js"
+			],
+			[
+				"",
+				".groovy/suggestions.xdsl"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"selected_items":
+		[
+			[
+				"",
+				"/C/Working/Projects/mine/feedback/feedback-sublime.sublime-project"
+			]
+		],
+		"width": 380.0
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 254.0,
+	"status_bar_visible": true
+}

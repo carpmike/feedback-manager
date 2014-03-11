@@ -1,12 +1,35 @@
 'use strict';
 
-var mainModule = angular.module('myApp.controllers', ['ngResource'])
-    .controller('MainCtrl', ['$scope', '$rootScope', '$window', '$location', function ($scope, $rootScope, $window, $location) {
-
+var mainModule = angular.module('myApp.controllers', ['ngResource', 'http-auth-interceptor'])
+    .controller('MainCtrl', ['$scope', '$rootScope', '$http', '$location', '$modal', 'authService', function ($scope, $rootScope, $http, $location, $modal, authService) {
+        // set this in case there is a deep link - use it first, then remove it in "changePath"
+        $scope.firstPath = $location.url();
         // tabs control what gets loaded in main content area
         $scope.changePath = function(path) {
-            $location.url(path);
+            // if there is a deep link, go there first, then do it right for all future navigation
+            if ($scope.firstPath) {
+                $location.url($scope.firstPath);
+                $scope.firstPath = null;
+            } else {
+                $location.url(path);
+            }
         };
+
+        // handle the authn error by forcing login - uses the auth.js modules
+        $rootScope.$on('event:auth-loginRequired', function(event, rejection) {
+            // console.log("got the login required event with status: " + rejection.status);  
+            var modalInstance = $modal.open({
+                templateUrl: 'partials/login-form.html',
+                controller: loginCtrl
+            });
+
+            modalInstance.result.then(function (user) {
+                var encodedUserNameAndPassword = window.btoa(user.username + ':' + user.password);
+                $http.defaults.headers.common['Authorization'] = 'Basic ' + encodedUserNameAndPassword;
+                console.log("auth string: " + $http.defaults.headers.common['Authorization']);
+                authService.loginConfirmed();
+            }); 
+        });
     }])
     .controller('PeopleListCtrl', ['$scope', '$modal', '$route', 'people', function ($scope, $modal, $route, people) {
         
@@ -20,7 +43,7 @@ var mainModule = angular.module('myApp.controllers', ['ngResource'])
                 controller: personDetailCtrl,
                 resolve: {
                     person: function() {
-                        return findInList($scope.people, personId);;
+                        return findInList($scope.people, personId);s
                     }
                 }
             });
@@ -33,7 +56,7 @@ var mainModule = angular.module('myApp.controllers', ['ngResource'])
             });
         };
     }])
-    .controller('FeedbackListCtrl', ['$scope', '$location', 'feedbacks', function ($scope, $location, feedbacks) {
+    .controller('FeedbackListCtrl', ['$scope', '$location', '$routeParams', 'feedbacks', function ($scope, $location, $routeParams, feedbacks) {
         feedbacks.getFeedback().then(function(results) {
             $scope.feedback = results;
         });
@@ -42,7 +65,7 @@ var mainModule = angular.module('myApp.controllers', ['ngResource'])
             $location.url('/feedback/' + feedbackId);
         };
     }])    
-    .controller('FeedbackCtrl', ['$scope', '$log','$routeParams', '$q', '$http', 'people', 'categories', 'feedbacks', 'feedbackTypes',  function ($scope, $log, $routeParams, $q, $http, people, categories, feedbacks, feedbackTypes) {
+    .controller('FeedbackCtrl', ['$scope', '$log','$routeParams', '$q', '$location', '$http', 'people', 'categories', 'feedbacks', 'feedbackTypes',  function ($scope, $log, $routeParams, $q, $location, $http, people, categories, feedbacks, feedbackTypes) {
         // $scope.master = {};
 
         $scope.returnToList = function() {
@@ -119,5 +142,14 @@ var personDetailCtrl = function ($scope, $modalInstance, person) {
 
     $scope.cancel = function() {
         $modalInstance.dismiss('cancel');
+    };
+};
+
+var loginCtrl = function ($scope, $modalInstance) {
+    var user = {"username":"", "password":""};
+    $scope.user = user;
+
+    $scope.login = function() {
+        $modalInstance.close($scope.user);
     };
 };

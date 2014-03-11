@@ -127,4 +127,37 @@ angular.module('myApp.domainClasses', [])
 
         return feedbackTypes;
     }]);
+    // .factory('httpInterceptor', ['$q', function ($q) {
+    //     return {
+    //         // On request success
+    //         request: function (config) {
+    //             console.log("request config: " + config); // Contains the data about the request before it is sent.
+
+    //             // Return the config or wrap it in a promise if blank.
+    //             return config || $q.when(config);
+    //         },
+
+    //         // On response success
+    //         response: function (response) {
+    //             // console.log(response); // Contains the data from the response.
+
+    //             // Return the response or promise.
+    //             return response || $q.when(response);
+    //         },
+
+    //         // On response failture
+    //         responseError: function (rejection) {
+    //             // console.log(rejection); // Contains the data about the error.
+                
+    //             if (rejection.status == 401) alert("response got a 401.");
+                
+    //             // Return the promise rejection.
+    //             return $q.reject(rejection);
+    //         }
+    //     };
+    // }])
+    // .config(['$httpProvider', function ($httpProvider) {
+    //     // Add the interceptor to the $httpProvider.
+    //     $httpProvider.interceptors.push('httpInterceptor');
+    // }]);
 

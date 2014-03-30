@@ -13,8 +13,8 @@ function findInList(list, id) {
     return it;
 }
 
-//var fbURL = 'http://feedback-web.carpmike.cloudbees.net';
-var fbURL = 'http://localhost:8080/feedback-web'
+var fbURL = 'http://feedback-web.carpmike.cloudbees.net';
+// var fbURL = 'http://localhost:8080/feedback-web'
 var to = 2000; // 2 second timeout
 
 angular.module('myApp.domainClasses', [])
@@ -26,11 +26,11 @@ angular.module('myApp.domainClasses', [])
                 var peoplePromise = $http.get(fbURL + '/persons?max=50', { timeout: to })
                     .then(function(results){
                         //Success;
-                        console.log("Success: " + results.status);
+                        console.log(":FB:Success: " + results.status);
                         return results.data;               
                     }, function(results){
                         //error
-                        console.log("Error: " + results.status);
+                        console.log(":FB:Error: " + results.status);
                         return results.data;
                     });
 
@@ -68,7 +68,7 @@ angular.module('myApp.domainClasses', [])
         var categories = {
             // returns a promise to get the categories
             getCategories: function() {
-                var categoriesPromise = $http.get(fbURL + '/categories', { cache: true, timeout: to })
+                var categoriesPromise = $http.get(fbURL + '/categories', { timeout: to })
                     .then(function(results){
                         //Success;
                         console.log("Success: " + results.status);
@@ -80,7 +80,31 @@ angular.module('myApp.domainClasses', [])
                     });
 
                 return categoriesPromise;
-            }            
+            },
+            saveCategory: function(category) {
+                var categoryPromise;
+                if (category.id) {
+                    categoryPromise = $http.put(fbURL + '/categories/' + category.id, category, { timeout: to })
+                        .success(function(results){
+                            console.log("Success: " + results.status);
+                            return results.data;
+                        }).error(function(results, status){
+                            alert("Failed to update category " + category.name + ". HTTP status: " + status);
+                            return results.data;
+                        });
+                } else {
+                    categoryPromise = $http.post(fbURL + '/categories', category, { timeout: to })
+                        .success(function(results){
+                            console.log("Success: " + results.status);
+                            return results.data;
+                        }).error(function(results, status){
+                            alert("Failed to save category " + category.name + ". HTTP status: " + status);
+                            return results.data;
+                        });
+                }
+
+                return categoryPromise;
+            }
         };
 
         return categories;

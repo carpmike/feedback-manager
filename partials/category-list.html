@@ -1,0 +1,18 @@
+<div class="container">
+    <div class="row">
+        <div class="col-sm-offset-1 col-sm-3">
+            <h3>Your categories...</h3>
+        </div>
+        <div class="col-sm-2">
+            <button class="btn btn-default btn-sm" ng-click="open()">New Category</button>
+        </div>
+    </div>
+    <div>
+        <ul>
+            <li ng-repeat="category in categories | filter:query | orderBy:orderProp">
+                <div class="col-sm-offset-1 col-sm-3">{{category.name}}</div>
+                <div class="col-sm-1"><button class="btn btn-default btn-sm" ng-click="open(category.id)">Edit</button></div>
+            </li>
+        </ul>
+    </div>
+</div>

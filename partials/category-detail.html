@@ -1,0 +1,17 @@
+<div class="modal-header">
+    <h2>Edit your category...</h2>
+</div>
+<div class="container">
+	<form class="form-horizontal" role="form" novalidate>
+        <div class="form-group">
+            <label for="name" class="col-sm-2 control-label">Name</label>
+            <div class="col-sm-4">
+                <input type="text" class="form-control" name="name" ng-model="category.name" required />
+            </div>
+        </div>        
+    </form>
+</div>
+<div class="modal-footer">
+    <button class="btn btn-primary" ng-click="ok()">Save</button>
+    <button class="btn btn-warning" ng-click="cancel()">Cancel</button>
+</div>

@@ -43,7 +43,7 @@ var mainModule = angular.module('myApp.controllers', ['ngResource', 'http-auth-i
                 controller: personDetailCtrl,
                 resolve: {
                     person: function() {
-                        return findInList($scope.people, personId);s
+                        return findInList($scope.people, personId);
                     }
                 }
             });
@@ -129,6 +129,31 @@ var mainModule = angular.module('myApp.controllers', ['ngResource', 'http-auth-i
         // $scope.isUnchanged = function(fb) {
         //     return angular.equals(fb, $scope.master);
         // };
+    }])
+    .controller('CategoryListCtrl', ['$scope', '$modal', '$route', 'categories', function ($scope, $modal, $route, categories) {
+        categories.getCategories().then(function(results) {
+            $scope.categories = results;
+        });
+
+        $scope.open = function (categoryId) {
+            var modalInstance = $modal.open({
+                templateUrl: 'partials/category-detail.html',
+                controller: categoryDetailCtrl,
+                resolve: {
+                    category: function() {
+                        return findInList($scope.categories, categoryId);
+                    }
+                }
+            });
+
+            modalInstance.result.then(function (category) {
+                $scope.category = category;
+                categories.saveCategory(category).then(function(results) {
+                    $route.reload();
+                });
+            });
+        };
+
     }]);
 
 // modal controllers
@@ -138,6 +163,19 @@ var personDetailCtrl = function ($scope, $modalInstance, person) {
 
     $scope.ok = function() {
         $modalInstance.close($scope.person);
+    };
+
+    $scope.cancel = function() {
+        $modalInstance.dismiss('cancel');
+    };
+};
+
+var categoryDetailCtrl = function ($scope, $modalInstance, category) {
+    if (!category) category = {"name":""};
+    $scope.category = category;
+
+    $scope.ok = function() {
+        $modalInstance.close($scope.category);
     };
 
     $scope.cancel = function() {

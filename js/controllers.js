@@ -43,7 +43,10 @@ var mainModule = angular.module('myApp.controllers', ['ngResource', 'http-auth-i
                 controller: personDetailCtrl,
                 resolve: {
                     person: function() {
-                        return findInList($scope.people, personId);
+                        if ($scope.people && personId) {
+                            return findInList($scope.people, personId);
+                        } 
+                        return;
                     }
                 }
             });
@@ -141,7 +144,10 @@ var mainModule = angular.module('myApp.controllers', ['ngResource', 'http-auth-i
                 controller: categoryDetailCtrl,
                 resolve: {
                     category: function() {
-                        return findInList($scope.categories, categoryId);
+                        if ($scope.people && personId) {
+                            return findInList($scope.categories, categoryId);
+                        } 
+                        return;                        
                     }
                 }
             });

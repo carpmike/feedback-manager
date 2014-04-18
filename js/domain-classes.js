@@ -13,8 +13,8 @@ function findInList(list, id) {
     return it;
 }
 
-var fbURL = 'http://feedback-web.carpmike.cloudbees.net';
-// var fbURL = 'http://localhost:8080/feedback-web'
+// var fbURL = 'http://feedback-web.carpmike.cloudbees.net';
+var fbURL = 'http://localhost:8080/feedback-web'
 var to = 2000; // 2 second timeout
 
 angular.module('myApp.domainClasses', [])
@@ -54,7 +54,7 @@ angular.module('myApp.domainClasses', [])
                             return results.data; 
                         }).error(function(results, status){
                             alert("Failed to save person " + person.firstName + " " + person.lastName + ". HTTP status: " + status);
-                            return results.data; 
+                            return; 
                         });
                 }
 
@@ -99,7 +99,7 @@ angular.module('myApp.domainClasses', [])
                             return results.data;
                         }).error(function(results, status){
                             alert("Failed to save category " + category.name + ". HTTP status: " + status);
-                            return results.data;
+                            return;
                         });
                 }
 

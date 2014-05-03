@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"failed",
+				"failedFirstTry"
+			],
+			[
 				"th",
 				"thead	Tag"
 			],
@@ -28,10 +32,35 @@
 	"buffers":
 	[
 		{
+			"file": "/C/Working/Web/APIs/twitter-bootstrap.3.1.0/bootstrap.css",
+			"settings":
+			{
+				"buffer_size": 122997,
+				"line_ending": "Windows",
+				"name": "/*!"
+			}
+		},
+		{
+			"file": "js/auth.js",
+			"settings":
+			{
+				"buffer_size": 4061,
+				"line_ending": "Windows"
+			}
+		},
+		{
 			"file": "js/controllers.js",
 			"settings":
 			{
-				"buffer_size": 7753,
+				"buffer_size": 9339,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "js/app.js",
+			"settings":
+			{
+				"buffer_size": 898,
 				"line_ending": "Windows"
 			}
 		},
@@ -44,34 +73,18 @@
 			}
 		},
 		{
-			"file": "js/app.js",
-			"settings":
-			{
-				"buffer_size": 913,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "partials/category-list.html",
-			"settings":
-			{
-				"buffer_size": 659,
-				"line_ending": "Windows"
-			}
-		},
-		{
 			"file": "index.html",
 			"settings":
 			{
-				"buffer_size": 2019,
+				"buffer_size": 2411,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "partials/category-detail.html",
+			"file": "partials/login-form.html",
 			"settings":
 			{
-				"buffer_size": 627,
+				"buffer_size": 1034,
 				"line_ending": "Windows"
 			}
 		}
@@ -128,19 +141,24 @@
 	},
 	"file_history":
 	[
-		"/C/Working/Projects/mine/feedback-manager/js/services.js",
+		"/C/Working/Projects/mine/feedback-manager/lib/angular-local-storage.min.js",
+		"/C/Working/Projects/mine/feedback-manager/mongoose.conf",
+		"/C/Working/Projects/mine/feedback-manager/css/styles.css",
+		"/C/Working/Projects/mine/feedback-manager/index.html",
+		"/C/Working/Projects/mine/feedback-manager/partials/category-list.html",
+		"/C/Working/Projects/mine/feedback-manager/partials/people-list.html",
+		"/C/Working/Projects/mine/feedback-manager/js/controllers.js",
+		"/C/Working/Projects/mine/feedback-manager/partials/login-form.html",
+		"/C/Working/Projects/mine/feedback-manager/js/app.js",
+		"/C/Working/Projects/mine/feedback-manager/partials/feedback-list.html",
 		"/C/Working/Projects/mine/feedback-manager/js/auth.js",
 		"/C/Working/Projects/mine/feedback-manager/js/domain-classes.js",
-		"/C/Working/Projects/mine/feedback-manager/js/app.js",
-		"/C/Working/Projects/mine/feedback-manager/index.html",
-		"/C/Working/Projects/mine/feedback-manager/partials/login-form.html",
+		"/C/Working/Projects/mine/feedback-manager/partials/category-detail.html",
+		"/C/Working/Projects/mine/feedback-manager/css/ng-quick-date-default-theme.css",
+		"/C/Working/Projects/mine/feedback-manager/js/services.js",
 		"/C/Working/Projects/mine/feedback-manager/partials/people-detail.html",
-		"/C/Working/Projects/mine/feedback-manager/css/styles.css",
-		"/C/Working/Projects/mine/feedback-manager/partials/feedback-list.html",
 		"/C/Working/Projects/mine/RallyDataRetriever/src/rally/RallyBatchCycleTimeRetriever.groovy",
 		"/C/Working/Projects/mine/RallyDataRetriever/src/rally/RallyAdminConsoleCycleTimeRetriever.groovy",
-		"/C/Working/Projects/mine/feedback-manager/js/controllers.js",
-		"/C/Working/Projects/mine/feedback-manager/partials/people-list.html",
 		"/C/Working/Projects/mine/feedback-manager/partials/feedback-form.html",
 		"/C/Working/Projects/mine/feedback/www/js/app.js",
 		"/C/Working/Projects/mine/feedback/www/index.html",
@@ -160,7 +178,6 @@
 		"/C/Working/Projects/mine/feedback/www/js/rest-services.js",
 		"/C/Working/Projects/mine/feedback/www/partials/feedback-type.html",
 		"/c/Working/Scripting/batch/mycmd.bat",
-		"/C/Working/Projects/mine/feedback-manager/mongoose.conf",
 		"/c/Working/Projects/mine/RallyDataRetriever/src/rally/RallyAdminConsoleCycleTimeRetriever.groovy",
 		"/C/Working/Projects/mine/AngularJS-Routing/index.htm",
 		"/C/Working/Projects/mine/AngularJS-Routing/assets/app/main.js",
@@ -258,6 +275,7 @@
 		"case_sensitive": true,
 		"find_history":
 		[
+			"vertical",
 			"person",
 			"testUser",
 			"wrtDate",
@@ -332,23 +350,23 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 6,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "js/controllers.js",
+					"file": "/C/Working/Web/APIs/twitter-bootstrap.3.1.0/bootstrap.css",
 					"settings":
 					{
-						"buffer_size": 7753,
+						"buffer_size": 122997,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								6334,
-								6334
+								4729,
+								4729
 							]
 						],
 						"settings":
@@ -359,6 +377,7 @@
 								"README",
 								"FIXME"
 							],
+							"auto_name": "/*!",
 							"csslint_options":
 							{
 								"adjoining-classes": "warning",
@@ -442,30 +461,30 @@
 								"Ruby on Rails": "ruby"
 							},
 							"sublimelinter_wrap_find": true,
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"tab_size": 4,
+							"syntax": "Packages/CSS/CSS.tmLanguage",
+							"tab_size": 2,
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 2142.0,
+						"translation.y": 5099.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 1,
-					"file": "js/domain-classes.js",
+					"file": "js/auth.js",
 					"settings":
 					{
-						"buffer_size": 7511,
+						"buffer_size": 4061,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								4380,
-								4380
+								2036,
+								2036
 							]
 						],
 						"settings":
@@ -560,29 +579,29 @@
 							},
 							"sublimelinter_wrap_find": true,
 							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"tab_size": 4,
+							"tab_size": 2,
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 504.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 2,
-					"file": "js/app.js",
+					"file": "js/controllers.js",
 					"settings":
 					{
-						"buffer_size": 913,
+						"buffer_size": 9339,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								851,
-								851
+								8722,
+								8722
 							]
 						],
 						"settings":
@@ -681,25 +700,25 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 3654.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 3,
-					"file": "partials/category-list.html",
+					"file": "js/app.js",
 					"settings":
 					{
-						"buffer_size": 659,
+						"buffer_size": 898,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								652,
-								652
+								898,
+								898
 							]
 						],
 						"settings":
@@ -793,7 +812,7 @@
 								"Ruby on Rails": "ruby"
 							},
 							"sublimelinter_wrap_find": true,
-							"syntax": "Packages/AngularJS/AngularJS.tmLanguage",
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
 							"tab_size": 4,
 							"translate_tabs_to_spaces": true
 						},
@@ -805,18 +824,135 @@
 				},
 				{
 					"buffer": 4,
-					"file": "index.html",
+					"file": "js/domain-classes.js",
 					"settings":
 					{
-						"buffer_size": 2019,
+						"buffer_size": 7511,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1099,
-								1099
+								1944,
+								1944
+							]
+						],
+						"settings":
+						{
+							"annotations":
+							[
+								"TODO",
+								"README",
+								"FIXME"
+							],
+							"csslint_options":
+							{
+								"adjoining-classes": "warning",
+								"box-model": true,
+								"box-sizing": "warning",
+								"compatible-vendor-prefixes": "warning",
+								"display-property-grouping": true,
+								"duplicate-background-images": "warning",
+								"duplicate-properties": true,
+								"empty-rules": true,
+								"errors": true,
+								"fallback-colors": "warning",
+								"floats": "warning",
+								"font-faces": "warning",
+								"font-sizes": "warning",
+								"gradients": "warning",
+								"ids": "warning",
+								"import": "warning",
+								"important": "warning",
+								"known-properties": true,
+								"outline-none": "warning",
+								"overqualified-elements": "warning",
+								"qualified-headings": "warning",
+								"regex-selectors": "warning",
+								"rules-count": "warning",
+								"shorthand": "warning",
+								"star-property-hack": "warning",
+								"text-indent": "warning",
+								"underscore-property-hack": "warning",
+								"unique-headings": "warning",
+								"universal-selector": "warning",
+								"vendor-prefix": true,
+								"zero-units": "warning"
+							},
+							"gjslint_ignore":
+							[
+								110
+							],
+							"gjslint_options":
+							[
+							],
+							"javascript_linter": "jshint",
+							"jshint_options":
+							{
+								"browser": true,
+								"evil": true,
+								"regexdash": true,
+								"sub": true,
+								"trailing": true,
+								"wsh": true
+							},
+							"pep8": true,
+							"pep8_ignore":
+							[
+								"E501"
+							],
+							"perl_linter": "perlcritic",
+							"pyflakes_ignore":
+							[
+							],
+							"pyflakes_ignore_import_*": true,
+							"sublimelinter": true,
+							"sublimelinter_delay": 2,
+							"sublimelinter_disable":
+							[
+							],
+							"sublimelinter_executable_map":
+							{
+							},
+							"sublimelinter_fill_outlines": false,
+							"sublimelinter_gutter_marks": true,
+							"sublimelinter_gutter_marks_theme": "simple",
+							"sublimelinter_mark_style": "none",
+							"sublimelinter_notes": false,
+							"sublimelinter_objj_check_ascii": false,
+							"sublimelinter_popup_errors_on_save": false,
+							"sublimelinter_syntax_map":
+							{
+								"C++": "c",
+								"Python Django": "python",
+								"Ruby on Rails": "ruby"
+							},
+							"sublimelinter_wrap_find": true,
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "index.html",
+					"settings":
+					{
+						"buffer_size": 2411,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								411,
+								411
 							]
 						],
 						"settings":
@@ -915,25 +1051,25 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 126.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
-					"buffer": 5,
-					"file": "partials/category-detail.html",
+					"buffer": 6,
+					"file": "partials/login-form.html",
 					"settings":
 					{
-						"buffer_size": 627,
+						"buffer_size": 1034,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								482,
-								482
+								137,
+								137
 							]
 						],
 						"settings":
@@ -1082,16 +1218,40 @@
 		"selected_items":
 		[
 			[
+				"index",
+				"index.html"
+			],
+			[
+				"auth",
+				"js/auth.js"
+			],
+			[
+				"ind",
+				"index.html"
+			],
+			[
+				"domain",
+				"js/domain-classes.js"
+			],
+			[
+				"",
+				"mongoose.conf"
+			],
+			[
+				"app.",
+				"js/app.js"
+			],
+			[
+				"doma",
+				"js/domain-classes.js"
+			],
+			[
 				"index.js",
 				"www/js/index.js"
 			],
 			[
 				"confi",
 				"www/config.xml"
-			],
-			[
-				"index",
-				"www/js/index.js"
 			],
 			[
 				"inde",
@@ -1108,10 +1268,6 @@
 			[
 				".js",
 				"web-app/js/sitter.js"
-			],
-			[
-				"",
-				".groovy/suggestions.xdsl"
 			]
 		],
 		"width": 0.0
@@ -1123,7 +1279,7 @@
 		[
 			[
 				"",
-				"/C/Working/Projects/mine/feedback-web/feedback-web.sublime-project"
+				"/C/Working/Projects/mine/feedback/feedback-sublime.sublime-project"
 			]
 		],
 		"width": 380.0

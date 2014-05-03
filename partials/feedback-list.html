@@ -1,6 +1,6 @@
 <div class="container">
 	<h3>Feedback for your people...</h3>
-    <div>
+    <div class="table-responsive">
         <table class="table table-striped">
             <tbody>
                 <tr>
@@ -25,7 +25,7 @@
                         {{fb.text}}
                     </td>
                     <td>
-                        {{fb.date}}
+                        {{fb.date | date:'shortDate'}}
                     </td>
                     <td>
                         <button class="btn btn-default btn-sm" ng-click="edit(fb.id)">Edit</button>

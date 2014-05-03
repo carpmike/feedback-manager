@@ -13,8 +13,8 @@ function findInList(list, id) {
     return it;
 }
 
-// var fbURL = 'http://feedback-web.carpmike.cloudbees.net';
-var fbURL = 'http://localhost:8080/feedback-web'
+var fbURL = 'http://feedback-web.carpmike.cloudbees.net';
+// var fbURL = 'http://localhost:8080/feedback-web'
 var to = 2000; // 2 second timeout
 
 angular.module('myApp.domainClasses', [])
@@ -27,7 +27,7 @@ angular.module('myApp.domainClasses', [])
                     .then(function(results){
                         //Success;
                         console.log(":FB:Success: " + results.status);
-                        return results.data;               
+                        return results.data;
                     }, function(results){
                         //error
                         console.log(":FB:Error: " + results.status);
@@ -42,19 +42,19 @@ angular.module('myApp.domainClasses', [])
                     personPromise = $http.put(fbURL + '/persons/' + person.id, person, { timeout: to })
                         .success(function(results){
                             console.log("Success: " + results.status);
-                            return results.data; 
+                            return results.data;
                         }).error(function(results, status){
                             alert("Failed to update person " + person.firstName + " " + person.lastName + ". HTTP status: " + status);
-                            return results.data; 
+                            return results.data;
                         });
                 } else {
                     personPromise = $http.post(fbURL + '/persons', person, { timeout: to })
                         .success(function(results){
                             console.log("Success: " + results.status);
-                            return results.data; 
+                            return results.data;
                         }).error(function(results, status){
                             alert("Failed to save person " + person.firstName + " " + person.lastName + ". HTTP status: " + status);
-                            return; 
+                            return;
                         });
                 }
 
@@ -72,7 +72,7 @@ angular.module('myApp.domainClasses', [])
                     .then(function(results){
                         //Success;
                         console.log("Success: " + results.status);
-                        return results.data;               
+                        return results.data;              
                     }, function(results){
                         //error
                         console.log("Error: " + results.status);
@@ -117,7 +117,7 @@ angular.module('myApp.domainClasses', [])
                     .then(function(results){
                         //Success;
                         console.log("Success: " + results.status);
-                        return results.data;               
+                        return results.data;
                     }, function(results){
                         //error
                         console.log("Error: " + results.status);
@@ -125,7 +125,22 @@ angular.module('myApp.domainClasses', [])
                     });
 
                 return feedbackPromise;
-            }            
+            },
+            deleteFeedback: function(fbId) {
+                if (!fbId) return;
+                var feedbackPromise = $http.delete(fbURL + '/feedbacks/' + fbId)
+                    .then(function(results){
+                        //Success;
+                        console.log("Success: " + results.status);
+                        return results.data;
+                    }, function(results){
+                        //error
+                        console.log("Error: " + results.status);
+                        return results.data;
+                    });
+
+                return feedbackPromise;
+            }
         };
 
         return feedbacks;
@@ -138,7 +153,7 @@ angular.module('myApp.domainClasses', [])
                     .then(function(results){
                         //Success;
                         console.log("Success: " + results.status);
-                        return results.data;               
+                        return results.data;
                     }, function(results){
                         //error
                         console.log("Error: " + results.status);
@@ -146,7 +161,7 @@ angular.module('myApp.domainClasses', [])
                     });
 
                 return feedbackTypesPromise;
-            }            
+            }
         };
 
         return feedbackTypes;

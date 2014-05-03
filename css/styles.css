@@ -14,3 +14,18 @@ ul {
     list-style-type: none;
 }
 
+#main-header img {
+	margin-top: 15px;
+	margin-bottom: 10px;
+}
+
+#main-header h3 {
+	margin-top: 30px;
+	margin-bottom: 10px;
+}
+
+.header-button {
+	margin-top: 18px;
+	margin-bottom: 10px;
+}
+

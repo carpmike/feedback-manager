@@ -1,7 +1,6 @@
-'use strict';
-
-var mainModule = angular.module('myApp.controllers', ['ngResource', 'http-auth-interceptor'])
-    .controller('MainCtrl', ['$scope', '$rootScope', '$http', '$location', '$modal', 'authService', function ($scope, $rootScope, $http, $location, $modal, authService) {
+var mainModule = angular.module('myApp.controllers', ['ngResource', 'http-auth-interceptor', 'LocalStorageModule'])
+    .controller('MainCtrl', ['$scope', '$rootScope', '$http', '$location', '$modal', '$resource', 'authService', 'localStorageService',
+        function ($scope, $rootScope, $http, $location, $modal, $resource, authService, localStorageService) {
         // set this in case there is a deep link - use it first, then remove it in "changePath"
         $scope.firstPath = $location.url();
         // tabs control what gets loaded in main content area
@@ -15,20 +14,49 @@ var mainModule = angular.module('myApp.controllers', ['ngResource', 'http-auth-i
             }
         };
 
+        // clean up the login failure flag
+        $rootScope.$on('event:auth-loginConfirmed', function(event) {
+            $rootScope.failedFirstTry = null;
+        });
+
         // handle the authn error by forcing login - uses the auth.js modules
         $rootScope.$on('event:auth-loginRequired', function(event, rejection) {
             // console.log("got the login required event with status: " + rejection.status);  
+            // check to see if the token is in local storage and if it is, add it to the http headers, otherwise prompt the user for credentials
+            var authToken = localStorageService.get('FeedbockAuthToken');
+            if (!rejection.failedFirstTry && authToken) {
+                $http.defaults.headers.common['x-auth-token'] = authToken;
+                authService.loginConfirmed();
+                return;
+            }
+
+            $rootScope.failedFirstTry = rejection.failedFirstTry;
+
             var modalInstance = $modal.open({
                 templateUrl: 'partials/login-form.html',
                 controller: loginCtrl
             });
 
             modalInstance.result.then(function (user) {
-                var encodedUserNameAndPassword = window.btoa(user.username + ':' + user.password);
-                $http.defaults.headers.common['Authorization'] = 'Basic ' + encodedUserNameAndPassword;
-                console.log("auth string: " + $http.defaults.headers.common['Authorization']);
-                authService.loginConfirmed();
-            }); 
+                $http.post(fbURL + '/api/login',
+                            {"username":user.username, "password":user.password},
+                            {"ignoreAuthModule":true})
+                    .success(function(results) {
+                    
+                    console.log("auth token: " + results.token);
+                    $http.defaults.headers.common['x-auth-token'] = results.token;
+                    
+                    // store the token in local storage
+                    localStorageService.set('FeedbockAuthToken', results.token);
+
+                    // notify login confirmed
+                    authService.loginConfirmed();
+                })
+                .error(function(data,status) {
+                    console.log("got a failure when trying to authenticate: " + status);
+                    $rootScope.$broadcast('event:auth-loginRequired', {"status":status, "failedFirstTry":true});
+                });
+            });
         });
     }])
     .controller('PeopleListCtrl', ['$scope', '$modal', '$route', 'people', function ($scope, $modal, $route, people) {
@@ -45,7 +73,7 @@ var mainModule = angular.module('myApp.controllers', ['ngResource', 'http-auth-i
                     person: function() {
                         if ($scope.people && personId) {
                             return findInList($scope.people, personId);
-                        } 
+                        }
                         return;
                     }
                 }
@@ -67,8 +95,10 @@ var mainModule = angular.module('myApp.controllers', ['ngResource', 'http-auth-i
         $scope.edit = function(feedbackId) {
             $location.url('/feedback/' + feedbackId);
         };
-    }])    
-    .controller('FeedbackCtrl', ['$scope', '$log','$routeParams', '$q', '$location', '$http', 'people', 'categories', 'feedbacks', 'feedbackTypes',  function ($scope, $log, $routeParams, $q, $location, $http, people, categories, feedbacks, feedbackTypes) {
+    }])
+    .controller('FeedbackCtrl', ['$scope', '$log','$routeParams', '$q', '$location', '$http', 'people', 'categories', 'feedbacks', 'feedbackTypes',
+                function ($scope, $log, $routeParams, $q, $location, $http, people, categories, feedbacks, feedbackTypes)
+        {
         // $scope.master = {};
 
         $scope.returnToList = function() {
@@ -122,6 +152,13 @@ var mainModule = angular.module('myApp.controllers', ['ngResource', 'http-auth-i
             });
         };
 
+        $scope.delete = function(fb) {
+            $log.info("deleting fb: " + fb.id);
+            feedbacks.deleteFeedback(fb.id).then(function(results) {
+                $scope.returnToList();
+            });
+        };
+
         // $scope.reset = function() {
         //     $log.info("resetting - master: " + $scope.master.feedbackType.id);
         //     $scope.fb = angular.copy($scope.master);
@@ -146,8 +183,8 @@ var mainModule = angular.module('myApp.controllers', ['ngResource', 'http-auth-i
                     category: function() {
                         if ($scope.people && personId) {
                             return findInList($scope.categories, categoryId);
-                        } 
-                        return;                        
+                        }
+                        return;
                     }
                 }
             });
@@ -160,7 +197,17 @@ var mainModule = angular.module('myApp.controllers', ['ngResource', 'http-auth-i
             });
         };
 
-    }]);
+    }])
+    .directive('stopEvent', function () {
+        return {
+            restrict: 'A',
+            link: function (scope, element, attr) {
+                element.on(attr.stopEvent, function (e) {
+                    e.stopPropagation();
+                });
+            }
+        };
+    });
 
 // modal controllers
 var personDetailCtrl = function ($scope, $modalInstance, person) {
@@ -189,9 +236,10 @@ var categoryDetailCtrl = function ($scope, $modalInstance, category) {
     };
 };
 
-var loginCtrl = function ($scope, $modalInstance) {
+var loginCtrl = function ($scope, $modalInstance, $http, localStorageService) {
     var user = {"username":"", "password":""};
     $scope.user = user;
+    console.log("failed first try? " + $scope.failedFirstTry);
 
     $scope.login = function() {
         $modalInstance.close($scope.user);

@@ -1,7 +1,6 @@
 'use strict';
 
 var app = angular.module('myApp', [
-    'ngTouch',
     'ngRoute',
     'ngAnimate',
     'ui.bootstrap',

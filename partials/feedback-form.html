@@ -1,14 +1,21 @@
 <div>
     <div class="row">
         <div class="col-sm-offset-1 col-sm-7">
-            <h3>Edit your feedback for {{fb.person.firstName}} {{fb.person.lastName}}</h3>
+            <h3 ng-if="fb.id > 0">Edit your feedback for {{fb.person.firstName}} {{fb.person.lastName}}...</h3>
+            <h3 ng-if="fb.id < 1">Give feedback...</h3>
         </div>
         <div class="col-sm-4 bottom">
-            <a href="#" ng-click="returnToList()" class="btn btn-default btn-sm active" role="button">Back to feedback list</a>
+            <a href="#" ng-click="returnToList()" class="btn btn-default btn-sm header-button" role="button">Back to feedback list</a>
         </div>
     </div>
     <div id="feedback-form-div" class="container">
         <form id="feedback-form" class="form-horizontal" role="form" novalidate>
+            <div ng-if="fb.id < 1" class="form-group">
+                <label for="feedbackPerson" class="col-sm-2 control-label">Person</label>
+                <div class="col-sm-8">
+                    <select id="feedbackPerson" class="form-control" ng-model="fb.person" ng-options="p.firstName + ' ' + p.lastName for p in people" required></select>
+                </div>
+            </div>            
             <div class="form-group">
                 <label for="feedbackDate" class="col-sm-2 control-label">Date</label>
                 <div class="col-sm-8">
@@ -42,7 +49,7 @@
                 <div class="col-sm-4 col-sm-offset-8">
                     <!-- <button class="btn btn-warning" ng-click="reset()" ng-disabled="isUnchanged(fb)">Reset</button> -->
                     <button class="btn btn-primary" ng-click="save(fb)" ng-disabled="isUnchanged(fb)">Save</button>
-                    <button class="btn btn-danger" ng-click="delete(fb)">Delete</button>
+                    <button ng-if="fb.id > 0" class="btn btn-danger" ng-click="delete(fb)">Delete</button>
                 </div>
             </div>
         </form>

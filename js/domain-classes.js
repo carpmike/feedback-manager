@@ -126,6 +126,21 @@ angular.module('myApp.domainClasses', [])
 
                 return feedbackPromise;
             },
+            saveFeedback: function(fb) {
+                var putOrPost = $http.put;
+                if (!fb.id) putOrPost = $http.post;
+
+                var feedbackPromise = putOrPost(fbURL + '/feedbacks/' + (fb.id ? fb.id : ''), fb)
+                    .then(function(results){
+                        console.log("Success: " + results.status);
+                        return results.data;
+                    }, function(results){
+                        console.log("Error: " + results.status);
+                        return results.data;
+                    });
+
+                return feedbackPromise;
+            },
             deleteFeedback: function(fbId) {
                 if (!fbId) return;
                 var feedbackPromise = $http.delete(fbURL + '/feedbacks/' + fbId)

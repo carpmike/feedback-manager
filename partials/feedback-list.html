@@ -1,6 +1,18 @@
 <div class="container">
-	<h3>Feedback for your people...</h3>
+    <div class="row">
+        <div class="col-sm-4">
+            <h3>Feedback for your people...</h3>
+        </div>
+        <div class="col-sm-2">
+            <button class="btn btn-default btn-sm header-button" ng-click="open()">New Feedback</button>
+        </div>
+    </div>    
     <div class="table-responsive">
+        
+        <div class="form-group">
+            <label for="searchBox">Limit by:</label><input id="searchBox" type="text" ng-model="search.$" />
+        </div>  
+           
         <table class="table table-striped">
             <tbody>
                 <tr>
@@ -11,7 +23,7 @@
                     <th>Date</th>
                     <th>Action</th>
                 </tr>
-                <tr ng-repeat="fb in feedback | filter:query | orderBy:orderProp">
+                <tr ng-repeat="fb in feedback | filter:query | orderBy:'-date' | filter: search">
                     <td>
                         {{fb.person.firstName}} {{fb.person.lastName}}
                     </td>

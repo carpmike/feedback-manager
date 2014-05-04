@@ -92,6 +92,10 @@ var mainModule = angular.module('myApp.controllers', ['ngResource', 'http-auth-i
             $scope.feedback = results;
         });
 
+        $scope.open = function() {
+            $location.url('/feedback/0');
+        };
+
         $scope.edit = function(feedbackId) {
             $location.url('/feedback/' + feedbackId);
         };
@@ -105,35 +109,53 @@ var mainModule = angular.module('myApp.controllers', ['ngResource', 'http-auth-i
             $location.url('/feedback');
         };
 
-        feedbacks.getFeedback($routeParams.feedbackId).then(function(results) {
-            results.date = new Date(results.date);
-            $scope.fb = results;
-            $log.info("feedback id: " + $scope.fb.id + " text:" + $scope.fb.text);
-            $scope.category = results.category;
+        if (parseInt($routeParams.feedbackId, 10) < 1) {
+            $scope.fb = {id: null};
 
             $q.all([
                 people.getPeople().then(function(results) {
-                    $scope.person = findInList(results, $scope.fb.person.id);
-                    $scope.fb.person = $scope.person;
-                    $log.info("peeps");
+                    $scope.people = results;
                 }),
                 categories.getCategories().then(function(results) {
                     $scope.categories = results;
-                    $scope.fb.category = findInList(results, $scope.fb.category.id);
-                    $log.info("cats");
                 }),
                 feedbackTypes.getFeedbackTypes().then(function(results) {
                     $scope.feedbackTypes = results;
-                    $scope.fb.feedbackType = findInList(results, $scope.fb.feedbackType.id);
-                    $log.info("types");
                 })
             ])
             .then(function() {
-                // $scope.master = angular.copy($scope.fb);
-                // $scope.reset();
-                // $log.info("all - master: " + $scope.master.person.firstName);
             });
-        });
+        } else {
+            feedbacks.getFeedback($routeParams.feedbackId).then(function(results) {
+                results.date = new Date(results.date);
+                $scope.fb = results;
+                $log.info("feedback id: " + $scope.fb.id + " text:" + $scope.fb.text);
+                $scope.category = results.category;
+
+                $q.all([
+                    people.getPeople().then(function(results) {
+                        $scope.person = findInList(results, $scope.fb.person.id);
+                        $scope.fb.person = $scope.person;
+                        $log.info("peeps");
+                    }),
+                    categories.getCategories().then(function(results) {
+                        $scope.categories = results;
+                        $scope.fb.category = findInList(results, $scope.fb.category.id);
+                        $log.info("cats");
+                    }),
+                    feedbackTypes.getFeedbackTypes().then(function(results) {
+                        $scope.feedbackTypes = results;
+                        $scope.fb.feedbackType = findInList(results, $scope.fb.feedbackType.id);
+                        $log.info("types");
+                    })
+                ])
+                .then(function() {
+                    // $scope.master = angular.copy($scope.fb);
+                    // $scope.reset();
+                    // $log.info("all - master: " + $scope.master.person.firstName);
+                });
+            });
+        }
 
         $scope.open = function($event) {
             $event.preventDefault();
@@ -144,11 +166,8 @@ var mainModule = angular.module('myApp.controllers', ['ngResource', 'http-auth-i
 
         $scope.save = function(fb) {
             $log.info("saving fb: " + fb.id + " text: " + fb.text);
-            $http.put(fbURL + '/feedbacks/' + fb.id, fb).success(function(results){
-                // $scope.master = angular.copy(fb);
-            })
-            .error(function(data,status) {
-                alert("Failed to save feedback. HTTP status: " + status);
+            feedbacks.saveFeedback(fb).then(function(results) {
+                // post save
             });
         };
 

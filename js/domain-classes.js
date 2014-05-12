@@ -89,8 +89,7 @@ angular.module('myApp.domainClasses', [])
                             console.log("Success: " + results.status);
                             return results.data;
                         }).error(function(results, status){
-                            alert("Failed to update category " + category.name + ". HTTP status: " + status);
-                            return results.data;
+                            return results;
                         });
                 } else {
                     categoryPromise = $http.post(fbURL + '/categories', category, { timeout: to })

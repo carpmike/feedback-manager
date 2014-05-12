@@ -6,7 +6,10 @@ var app = angular.module('myApp', [
     'ui.bootstrap',
     'http-auth-interceptor',
     'myApp.domainClasses',
-    'myApp.controllers'
+    'myApp.controller.main',
+    'myApp.controller.people',
+    'myApp.controller.feedback',
+    'myApp.controller.category'
 ]);
 app.config(['$routeProvider', function ($routeProvider) {
     $routeProvider.when('/people', {templateUrl: 'partials/people-list.html', controller: 'PeopleListCtrl'});

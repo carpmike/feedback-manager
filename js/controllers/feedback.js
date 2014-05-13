@@ -12,8 +12,8 @@ var feedbackController = angular.module('myApp.controller.feedback', [])
             $location.url('/feedback/' + feedbackId);
         };
     }])
-    .controller('FeedbackCtrl', ['$scope', '$log','$routeParams', '$q', '$location', '$http', 'people', 'categories', 'feedbacks', 'feedbackTypes',
-                function ($scope, $log, $routeParams, $q, $location, $http, people, categories, feedbacks, feedbackTypes)
+    .controller('FeedbackCtrl', ['$rootScope', '$scope', '$log','$routeParams', '$q', '$location', '$http', 'people', 'categories', 'feedbacks', 'feedbackTypes',
+                function ($rootScope, $scope, $log, $routeParams, $q, $location, $http, people, categories, feedbacks, feedbackTypes)
         {
         // $scope.master = {};
 
@@ -79,7 +79,9 @@ var feedbackController = angular.module('myApp.controller.feedback', [])
         $scope.save = function(fb) {
             $log.info("saving fb: " + fb.id + " text: " + fb.text);
             feedbacks.saveFeedback(fb).then(function(results) {
-                // post save
+                $rootScope.$broadcast('event:alert-success', 'Successfully saved feedback!');
+            }, function(results) {
+                $rootScope.$broadcast('event:alert-failure', 'Failed to save feedback! Problem is ' + results.status + '.');
             });
         };
 

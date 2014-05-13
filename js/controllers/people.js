@@ -23,7 +23,9 @@ var peopleController = angular.module('myApp.controller.people', [])
                 $scope.person = person;
                 people.savePerson(person).then(function(results) {
                     $route.reload();
-                    $rootScope.$broadcast('event:alert-success');
+                    $rootScope.$broadcast('event:alert-success', 'Successfully saved ' + person.firstName + ' ' + person.lastName + '!');
+                }, function(results) {
+                    $rootScope.$broadcast('event:alert-failure', 'Failed to save ' + person.firstName + ' ' + person.lastName + '! Problem is ' + results.status + '.');
                 });
             });
         };

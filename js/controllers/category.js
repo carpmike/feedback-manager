@@ -24,7 +24,6 @@ var categoryController = angular.module('myApp.controller.category', [])
                     $route.reload();
                     $rootScope.$broadcast('event:alert-success', 'Successfully saved ' + category.name + '!');
                 }, function(results) {
-                	$route.reload();
                     $rootScope.$broadcast('event:alert-failure', 'Failed to save ' + category.name + '! Problem is ' + results.status + '.');
                 });
             });

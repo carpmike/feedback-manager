@@ -43,7 +43,7 @@
 			"file": "js/controllers/category.js",
 			"settings":
 			{
-				"buffer_size": 1785,
+				"buffer_size": 1751,
 				"line_ending": "Windows"
 			}
 		},
@@ -51,7 +51,7 @@
 			"file": "js/controllers/people.js",
 			"settings":
 			{
-				"buffer_size": 1501,
+				"buffer_size": 1781,
 				"line_ending": "Windows"
 			}
 		},
@@ -59,7 +59,7 @@
 			"file": "js/controllers/feedback.js",
 			"settings":
 			{
-				"buffer_size": 4092,
+				"buffer_size": 4343,
 				"line_ending": "Windows"
 			}
 		},
@@ -280,7 +280,7 @@
 	},
 	"find_in_files":
 	{
-		"height": 90.0,
+		"height": 0.0,
 		"where_history":
 		[
 			"C:\\Working\\Projects\\mine\\feedback-manager",
@@ -496,15 +496,15 @@
 					"file": "js/controllers/category.js",
 					"settings":
 					{
-						"buffer_size": 1785,
+						"buffer_size": 1751,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1048,
-								1048
+								1397,
+								1049
 							]
 						],
 						"settings":
@@ -599,10 +599,12 @@
 								"Ruby on Rails": "ruby"
 							},
 							"sublimelinter_wrap_find": true,
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 126.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -612,15 +614,15 @@
 					"file": "js/controllers/people.js",
 					"settings":
 					{
-						"buffer_size": 1501,
+						"buffer_size": 1781,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1100,
-								1055
+								1212,
+								1212
 							]
 						],
 						"settings":
@@ -714,7 +716,9 @@
 								"Ruby on Rails": "ruby"
 							},
 							"sublimelinter_wrap_find": true,
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -727,15 +731,15 @@
 					"file": "js/controllers/feedback.js",
 					"settings":
 					{
-						"buffer_size": 4092,
+						"buffer_size": 4343,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								67,
-								41
+								734,
+								734
 							]
 						],
 						"settings":
@@ -829,7 +833,9 @@
 								"Ruby on Rails": "ruby"
 							},
 							"sublimelinter_wrap_find": true,
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -1317,8 +1323,8 @@
 						"selection":
 						[
 							[
-								3717,
-								3717
+								393,
+								393
 							]
 						],
 						"settings":
@@ -1417,7 +1423,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 1214.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -1528,7 +1534,7 @@
 		[
 			[
 				"",
-				"/C/Working/Projects/mine/feedback/feedback-sublime.sublime-project"
+				"/C/Working/Projects/mine/feedback-web/feedback-web.sublime-project"
 			]
 		],
 		"width": 380.0

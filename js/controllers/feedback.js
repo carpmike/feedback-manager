@@ -4,12 +4,20 @@ var feedbackController = angular.module('myApp.controller.feedback', [])
             $scope.feedback = results;
         });
 
-        $scope.open = function() {
+        $scope.openForm = function() {
             $location.url('/feedback/0');
         };
 
-        $scope.edit = function(feedbackId) {
+        $scope.editForm = function(feedbackId) {
             $location.url('/feedback/' + feedbackId);
+        };
+
+        // for cal
+        $scope.open = function($event) {
+            $event.preventDefault();
+            $event.stopPropagation();
+
+            $scope.opened = true;
         };
     }])
     .controller('FeedbackCtrl', ['$rootScope', '$scope', '$log','$routeParams', '$q', '$location', '$http', 'people', 'categories', 'feedbacks', 'feedbackTypes',
@@ -103,3 +111,21 @@ var feedbackController = angular.module('myApp.controller.feedback', [])
         //     return angular.equals(fb, $scope.master);
         // };
     }]);
+
+feedbackController.filter('dateRangeSince', function() {
+    return function(originalList, sinceDate) {
+        if (sinceDate) {
+            var range = [];
+            if (originalList && originalList.length > 0) {
+                for (i = 0; i < originalList.length; ++i) {
+                    var tmpDate = new Date(originalList[i].date);
+                    if (tmpDate >= sinceDate) {
+                        range.push(originalList[i]);
+                    }
+                }
+            }
+            return range;
+        }
+        return originalList;
+    };
+});

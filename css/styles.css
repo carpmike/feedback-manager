@@ -31,9 +31,26 @@ ul {
 
 #feedback-filters label {
 	margin-right: 3px;
+}
+
+#feedback-filters .row {
+	margin-bottom: 5px;
 	margin-left: 10px;
 }
 
 #tabs a {
 	font-size: 18px;
+}
+
+#filter-group span {
+	font-size: 12px;
+}
+
+.filter-group-selected {
+	color: #2a6496;
+}
+
+.form.readonly {
+	padding-top: 7px;
+	padding-left: 29px;
 }

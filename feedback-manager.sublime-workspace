@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"fon",
+				"font-size"
+			],
+			[
 				"failed",
 				"failedFirstTry"
 			],
@@ -32,66 +36,10 @@
 	"buffers":
 	[
 		{
-			"file": "js/controllers/main.js",
+			"file": "partials/feedback-list.html",
 			"settings":
 			{
-				"buffer_size": 3890,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "js/controllers/category.js",
-			"settings":
-			{
-				"buffer_size": 1751,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "js/controllers/people.js",
-			"settings":
-			{
-				"buffer_size": 1781,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "js/controllers/feedback.js",
-			"settings":
-			{
-				"buffer_size": 4343,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "index.html",
-			"settings":
-			{
-				"buffer_size": 3030,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "partials/people-list.html",
-			"settings":
-			{
-				"buffer_size": 683,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "js/app.js",
-			"settings":
-			{
-				"buffer_size": 999,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "partials/category-detail.html",
-			"settings":
-			{
-				"buffer_size": 627,
+				"buffer_size": 3278,
 				"line_ending": "Windows"
 			}
 		},
@@ -99,7 +47,33 @@
 			"file": "js/domain-classes.js",
 			"settings":
 			{
-				"buffer_size": 8563,
+				"buffer_size": 8577,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "js/controllers/feedback.js",
+			"settings":
+			{
+				"buffer_size": 5415,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"contents": "Searching 50 files for \"givenfilter\"\n\nC:\\Working\\Projects\\mine\\feedback-manager\\partials\\feedback-list.html:\n   29          <div class=\"row\" id=\"filter-group\">\n   30              <div class=\"btn-group\">\n   31:               <!--  <label ng-click=\"givenFilter = {given: false}\" class=\"btn btn-primary\" btn-radio=\"'Feedback that has not been given'\">Feedback that has not been given</label> \n   32:                 <label ng-click=\"givenFilter = {given: true}\" class=\"btn btn-primary\" btn-radio=\"'Feedback that has been given'\">Feedback that has been given</label> \n   33:                 <label ng-click=\"givenFilter = null\" class=\"btn btn-primary\" btn-radio=\"'All feedback'\">All feedback</label> -->\n   34                  <label class=\"btn btn-primary\" ng-model=\"radioModel\" btn-radio=\"'Left'\">Left</label>\n   35                  <label class=\"btn btn-primary\" ng-model=\"radioModel\" btn-radio=\"'Middle'\">Middle</label>\n   ..\n   51                      <th>Action</th>\n   52                  </tr>\n   53:                 <tr ng-repeat=\"fb in feedback | orderBy:'-date' | filter: search | filter: givenFilter | dateRangeSince: feedbackDate\">\n   54                      <td>\n   55                          {{fb.person.firstName}} {{fb.person.lastName}}\n\n4 matches in 1 file\n",
+			"settings":
+			{
+				"buffer_size": 1272,
+				"line_ending": "Windows",
+				"name": "Find Results",
+				"scratch": true
+			}
+		},
+		{
+			"file": "partials/feedback-form.html",
+			"settings":
+			{
+				"buffer_size": 3743,
 				"line_ending": "Windows"
 			}
 		}
@@ -107,9 +81,13 @@
 	"build_system": "",
 	"command_palette":
 	{
-		"height": 311.0,
+		"height": 81.0,
 		"selected_items":
 		[
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
 			[
 				"Package Control: ",
 				"Package Control: List Packages"
@@ -139,7 +117,7 @@
 				"View: Toggle Open Files in Side Bar"
 			]
 		],
-		"width": 400.0
+		"width": 472.0
 	},
 	"console":
 	{
@@ -156,22 +134,30 @@
 	},
 	"file_history":
 	[
-		"/C/Working/Projects/mine/feedback-manager/js/controllers.js",
-		"/C/Working/Projects/mine/feedback-manager/css/styles.css",
-		"/C/Working/Projects/mine/feedback-manager/js/auth.js",
-		"/C/Working/Projects/mine/feedback-manager/partials/people-detail.html",
-		"/C/Working/Web/APIs/twitter-bootstrap.3.1.0/bootstrap.css",
-		"/C/Working/Projects/mine/feedback-manager/js/domain-classes.js",
 		"/C/Working/Projects/mine/feedback-manager/partials/feedback-form.html",
-		"/C/Working/Projects/mine/feedback-manager/index.html",
+		"/C/Working/Projects/mine/feedback-manager/js/domain-classes.js",
+		"/C/Working/Projects/mine/feedback-manager/js/filters.js",
+		"/C/Working/Projects/mine/feedback-manager/js/controllers/feedback.js",
 		"/C/Working/Projects/mine/feedback-manager/partials/feedback-list.html",
+		"/C/Working/Web/APIs/twitter-bootstrap.3.1.0/bootstrap.css",
+		"/C/Working/Projects/mine/feedback-manager/css/styles.css",
+		"/C/Working/Projects/mine/feedback-manager/index.html",
 		"/C/Working/Projects/mine/feedback-manager/js/app.js",
+		"/C/Working/Web/APIs/topcoat-0.8.0/css/topcoat-mobile-dark.css",
+		"/C/Working/Projects/mine/feedback-manager/partials/people-list.html",
+		"/C/Working/Projects/mine/feedback/www/css/styles.css",
+		"/C/Working/Projects/mine/feedback-manager/js/controllers/people.js",
+		"/C/Working/Projects/mine/feedback-manager/partials/people-detail.html",
+		"/C/Working/Projects/mine/feedback/www/css/topcoat-mobile-dark.min.css",
+		"/C/Working/Projects/mine/feedback-manager/js/controllers/main.js",
+		"/C/Working/Projects/mine/feedback-manager/js/controllers/category.js",
+		"/C/Working/Projects/mine/feedback-manager/partials/category-detail.html",
+		"/C/Working/Projects/mine/feedback-manager/js/controllers.js",
+		"/C/Working/Projects/mine/feedback-manager/js/auth.js",
 		"/C/Working/Projects/mine/feedback-manager/partials/login-form.html",
 		"/C/Working/Projects/mine/feedback-manager/lib/angular-local-storage.min.js",
 		"/C/Working/Projects/mine/feedback-manager/mongoose.conf",
 		"/C/Working/Projects/mine/feedback-manager/partials/category-list.html",
-		"/C/Working/Projects/mine/feedback-manager/partials/people-list.html",
-		"/C/Working/Projects/mine/feedback-manager/partials/category-detail.html",
 		"/C/Working/Projects/mine/feedback-manager/css/ng-quick-date-default-theme.css",
 		"/C/Working/Projects/mine/feedback-manager/js/services.js",
 		"/C/Working/Projects/mine/RallyDataRetriever/src/rally/RallyBatchCycleTimeRetriever.groovy",
@@ -280,7 +266,7 @@
 	},
 	"find_in_files":
 	{
-		"height": 0.0,
+		"height": 90.0,
 		"where_history":
 		[
 			"C:\\Working\\Projects\\mine\\feedback-manager",
@@ -290,9 +276,19 @@
 	},
 	"find_state":
 	{
-		"case_sensitive": true,
+		"case_sensitive": false,
 		"find_history":
 		[
+			"max",
+			"givenfilter",
+			"filer",
+			">,",
+			"returnToList",
+			"event:alert-success",
+			"\n#feedback-filters label {\n	margin-right: 3px;\n	margin-left: 10px;\n}\n",
+			"openform",
+			"en\" class=\"col-sm-1 control-label\">Not given feedback</label>\n            <input id=\"showNotGive",
+			"feedbackDate",
 			"mainModule",
 			"personDetailC",
 			"large",
@@ -342,6 +338,7 @@
 		"regex": false,
 		"replace_history":
 		[
+			"",
 			"category",
 			"adminUser",
 			"timeout: to",
@@ -376,18 +373,18 @@
 			[
 				{
 					"buffer": 0,
-					"file": "js/controllers/main.js",
+					"file": "partials/feedback-list.html",
 					"settings":
 					{
-						"buffer_size": 3890,
+						"buffer_size": 3278,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1133,
-								1133
+								230,
+								230
 							]
 						],
 						"settings":
@@ -398,6 +395,7 @@
 								"README",
 								"FIXME"
 							],
+							"color_scheme": "Packages/User/Color Highlighter/themes/Monokai Bright.tmTheme",
 							"csslint_options":
 							{
 								"adjoining-classes": "warning",
@@ -481,7 +479,7 @@
 								"Ruby on Rails": "ruby"
 							},
 							"sublimelinter_wrap_find": true,
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"syntax": "Packages/AngularJS/AngularJS.tmLanguage",
 							"tab_size": 4,
 							"translate_tabs_to_spaces": true
 						},
@@ -493,18 +491,18 @@
 				},
 				{
 					"buffer": 1,
-					"file": "js/controllers/category.js",
+					"file": "js/domain-classes.js",
 					"settings":
 					{
-						"buffer_size": 1751,
+						"buffer_size": 8577,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1397,
-								1049
+								0,
+								0
 							]
 						],
 						"settings":
@@ -515,7 +513,7 @@
 								"README",
 								"FIXME"
 							],
-							"auto_name": "",
+							"color_scheme": "Packages/User/Color Highlighter/themes/Monokai Bright.tmTheme",
 							"csslint_options":
 							{
 								"adjoining-classes": "warning",
@@ -611,18 +609,18 @@
 				},
 				{
 					"buffer": 2,
-					"file": "js/controllers/people.js",
+					"file": "js/controllers/feedback.js",
 					"settings":
 					{
-						"buffer_size": 1781,
+						"buffer_size": 5415,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1212,
-								1212
+								361,
+								361
 							]
 						],
 						"settings":
@@ -633,6 +631,7 @@
 								"README",
 								"FIXME"
 							],
+							"color_scheme": "Packages/User/Color Highlighter/themes/Monokai Bright.tmTheme",
 							"csslint_options":
 							{
 								"adjoining-classes": "warning",
@@ -728,114 +727,53 @@
 				},
 				{
 					"buffer": 3,
-					"file": "js/controllers/feedback.js",
 					"settings":
 					{
-						"buffer_size": 4343,
+						"buffer_size": 1272,
 						"regions":
 						{
+							"match":
+							{
+								"flags": 112,
+								"regions":
+								[
+									[
+										247,
+										258
+									],
+									[
+										430,
+										441
+									],
+									[
+										604,
+										615
+									],
+									[
+										1096,
+										1107
+									]
+								],
+								"scope": ""
+							}
 						},
 						"selection":
 						[
 							[
-								734,
-								734
+								108,
+								108
 							]
 						],
 						"settings":
 						{
-							"annotations":
-							[
-								"TODO",
-								"README",
-								"FIXME"
-							],
-							"csslint_options":
-							{
-								"adjoining-classes": "warning",
-								"box-model": true,
-								"box-sizing": "warning",
-								"compatible-vendor-prefixes": "warning",
-								"display-property-grouping": true,
-								"duplicate-background-images": "warning",
-								"duplicate-properties": true,
-								"empty-rules": true,
-								"errors": true,
-								"fallback-colors": "warning",
-								"floats": "warning",
-								"font-faces": "warning",
-								"font-sizes": "warning",
-								"gradients": "warning",
-								"ids": "warning",
-								"import": "warning",
-								"important": "warning",
-								"known-properties": true,
-								"outline-none": "warning",
-								"overqualified-elements": "warning",
-								"qualified-headings": "warning",
-								"regex-selectors": "warning",
-								"rules-count": "warning",
-								"shorthand": "warning",
-								"star-property-hack": "warning",
-								"text-indent": "warning",
-								"underscore-property-hack": "warning",
-								"unique-headings": "warning",
-								"universal-selector": "warning",
-								"vendor-prefix": true,
-								"zero-units": "warning"
-							},
-							"gjslint_ignore":
-							[
-								110
-							],
-							"gjslint_options":
-							[
-							],
-							"javascript_linter": "jshint",
-							"jshint_options":
-							{
-								"browser": true,
-								"evil": true,
-								"regexdash": true,
-								"sub": true,
-								"trailing": true,
-								"wsh": true
-							},
-							"pep8": true,
-							"pep8_ignore":
-							[
-								"E501"
-							],
-							"perl_linter": "perlcritic",
-							"pyflakes_ignore":
-							[
-							],
-							"pyflakes_ignore_import_*": true,
-							"sublimelinter": true,
-							"sublimelinter_delay": 2,
-							"sublimelinter_disable":
-							[
-							],
-							"sublimelinter_executable_map":
-							{
-							},
-							"sublimelinter_fill_outlines": false,
-							"sublimelinter_gutter_marks": true,
-							"sublimelinter_gutter_marks_theme": "simple",
-							"sublimelinter_mark_style": "none",
-							"sublimelinter_notes": false,
-							"sublimelinter_objj_check_ascii": false,
-							"sublimelinter_popup_errors_on_save": false,
-							"sublimelinter_syntax_map":
-							{
-								"C++": "c",
-								"Python Django": "python",
-								"Ruby on Rails": "ruby"
-							},
-							"sublimelinter_wrap_find": true,
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
+							"color_scheme": "Packages/User/Color Highlighter/themes/Monokai Bright.tmTheme",
+							"detect_indentation": false,
+							"output_tag": 1,
+							"result_base_dir": "",
+							"result_file_regex": "^([A-Za-z\\\\/<].*):$",
+							"result_line_regex": "^ +([0-9]+):",
+							"scroll_past_end": true,
+							"syntax": "Packages/Default/Find Results.hidden-tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -845,361 +783,10 @@
 				},
 				{
 					"buffer": 4,
-					"file": "index.html",
+					"file": "partials/feedback-form.html",
 					"settings":
 					{
-						"buffer_size": 3030,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1338,
-								1338
-							]
-						],
-						"settings":
-						{
-							"annotations":
-							[
-								"TODO",
-								"README",
-								"FIXME"
-							],
-							"csslint_options":
-							{
-								"adjoining-classes": "warning",
-								"box-model": true,
-								"box-sizing": "warning",
-								"compatible-vendor-prefixes": "warning",
-								"display-property-grouping": true,
-								"duplicate-background-images": "warning",
-								"duplicate-properties": true,
-								"empty-rules": true,
-								"errors": true,
-								"fallback-colors": "warning",
-								"floats": "warning",
-								"font-faces": "warning",
-								"font-sizes": "warning",
-								"gradients": "warning",
-								"ids": "warning",
-								"import": "warning",
-								"important": "warning",
-								"known-properties": true,
-								"outline-none": "warning",
-								"overqualified-elements": "warning",
-								"qualified-headings": "warning",
-								"regex-selectors": "warning",
-								"rules-count": "warning",
-								"shorthand": "warning",
-								"star-property-hack": "warning",
-								"text-indent": "warning",
-								"underscore-property-hack": "warning",
-								"unique-headings": "warning",
-								"universal-selector": "warning",
-								"vendor-prefix": true,
-								"zero-units": "warning"
-							},
-							"gjslint_ignore":
-							[
-								110
-							],
-							"gjslint_options":
-							[
-							],
-							"javascript_linter": "jshint",
-							"jshint_options":
-							{
-								"browser": true,
-								"evil": true,
-								"regexdash": true,
-								"sub": true,
-								"trailing": true,
-								"wsh": true
-							},
-							"pep8": true,
-							"pep8_ignore":
-							[
-								"E501"
-							],
-							"perl_linter": "perlcritic",
-							"pyflakes_ignore":
-							[
-							],
-							"pyflakes_ignore_import_*": true,
-							"sublimelinter": true,
-							"sublimelinter_delay": 2,
-							"sublimelinter_disable":
-							[
-							],
-							"sublimelinter_executable_map":
-							{
-							},
-							"sublimelinter_fill_outlines": false,
-							"sublimelinter_gutter_marks": true,
-							"sublimelinter_gutter_marks_theme": "simple",
-							"sublimelinter_mark_style": "none",
-							"sublimelinter_notes": false,
-							"sublimelinter_objj_check_ascii": false,
-							"sublimelinter_popup_errors_on_save": false,
-							"sublimelinter_syntax_map":
-							{
-								"C++": "c",
-								"Python Django": "python",
-								"Ruby on Rails": "ruby"
-							},
-							"sublimelinter_wrap_find": true,
-							"syntax": "Packages/AngularJS/AngularJS.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 5,
-					"file": "partials/people-list.html",
-					"settings":
-					{
-						"buffer_size": 683,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								683,
-								683
-							]
-						],
-						"settings":
-						{
-							"annotations":
-							[
-								"TODO",
-								"README",
-								"FIXME"
-							],
-							"csslint_options":
-							{
-								"adjoining-classes": "warning",
-								"box-model": true,
-								"box-sizing": "warning",
-								"compatible-vendor-prefixes": "warning",
-								"display-property-grouping": true,
-								"duplicate-background-images": "warning",
-								"duplicate-properties": true,
-								"empty-rules": true,
-								"errors": true,
-								"fallback-colors": "warning",
-								"floats": "warning",
-								"font-faces": "warning",
-								"font-sizes": "warning",
-								"gradients": "warning",
-								"ids": "warning",
-								"import": "warning",
-								"important": "warning",
-								"known-properties": true,
-								"outline-none": "warning",
-								"overqualified-elements": "warning",
-								"qualified-headings": "warning",
-								"regex-selectors": "warning",
-								"rules-count": "warning",
-								"shorthand": "warning",
-								"star-property-hack": "warning",
-								"text-indent": "warning",
-								"underscore-property-hack": "warning",
-								"unique-headings": "warning",
-								"universal-selector": "warning",
-								"vendor-prefix": true,
-								"zero-units": "warning"
-							},
-							"gjslint_ignore":
-							[
-								110
-							],
-							"gjslint_options":
-							[
-							],
-							"javascript_linter": "jshint",
-							"jshint_options":
-							{
-								"browser": true,
-								"evil": true,
-								"regexdash": true,
-								"sub": true,
-								"trailing": true,
-								"wsh": true
-							},
-							"pep8": true,
-							"pep8_ignore":
-							[
-								"E501"
-							],
-							"perl_linter": "perlcritic",
-							"pyflakes_ignore":
-							[
-							],
-							"pyflakes_ignore_import_*": true,
-							"sublimelinter": true,
-							"sublimelinter_delay": 2,
-							"sublimelinter_disable":
-							[
-							],
-							"sublimelinter_executable_map":
-							{
-							},
-							"sublimelinter_fill_outlines": false,
-							"sublimelinter_gutter_marks": true,
-							"sublimelinter_gutter_marks_theme": "simple",
-							"sublimelinter_mark_style": "none",
-							"sublimelinter_notes": false,
-							"sublimelinter_objj_check_ascii": false,
-							"sublimelinter_popup_errors_on_save": false,
-							"sublimelinter_syntax_map":
-							{
-								"C++": "c",
-								"Python Django": "python",
-								"Ruby on Rails": "ruby"
-							},
-							"sublimelinter_wrap_find": true,
-							"syntax": "Packages/AngularJS/AngularJS.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 6,
-					"file": "js/app.js",
-					"settings":
-					{
-						"buffer_size": 999,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								251,
-								251
-							]
-						],
-						"settings":
-						{
-							"annotations":
-							[
-								"TODO",
-								"README",
-								"FIXME"
-							],
-							"csslint_options":
-							{
-								"adjoining-classes": "warning",
-								"box-model": true,
-								"box-sizing": "warning",
-								"compatible-vendor-prefixes": "warning",
-								"display-property-grouping": true,
-								"duplicate-background-images": "warning",
-								"duplicate-properties": true,
-								"empty-rules": true,
-								"errors": true,
-								"fallback-colors": "warning",
-								"floats": "warning",
-								"font-faces": "warning",
-								"font-sizes": "warning",
-								"gradients": "warning",
-								"ids": "warning",
-								"import": "warning",
-								"important": "warning",
-								"known-properties": true,
-								"outline-none": "warning",
-								"overqualified-elements": "warning",
-								"qualified-headings": "warning",
-								"regex-selectors": "warning",
-								"rules-count": "warning",
-								"shorthand": "warning",
-								"star-property-hack": "warning",
-								"text-indent": "warning",
-								"underscore-property-hack": "warning",
-								"unique-headings": "warning",
-								"universal-selector": "warning",
-								"vendor-prefix": true,
-								"zero-units": "warning"
-							},
-							"gjslint_ignore":
-							[
-								110
-							],
-							"gjslint_options":
-							[
-							],
-							"javascript_linter": "jshint",
-							"jshint_options":
-							{
-								"browser": true,
-								"evil": true,
-								"regexdash": true,
-								"sub": true,
-								"trailing": true,
-								"wsh": true
-							},
-							"pep8": true,
-							"pep8_ignore":
-							[
-								"E501"
-							],
-							"perl_linter": "perlcritic",
-							"pyflakes_ignore":
-							[
-							],
-							"pyflakes_ignore_import_*": true,
-							"sublimelinter": true,
-							"sublimelinter_delay": 2,
-							"sublimelinter_disable":
-							[
-							],
-							"sublimelinter_executable_map":
-							{
-							},
-							"sublimelinter_fill_outlines": false,
-							"sublimelinter_gutter_marks": true,
-							"sublimelinter_gutter_marks_theme": "simple",
-							"sublimelinter_mark_style": "none",
-							"sublimelinter_notes": false,
-							"sublimelinter_objj_check_ascii": false,
-							"sublimelinter_popup_errors_on_save": false,
-							"sublimelinter_syntax_map":
-							{
-								"C++": "c",
-								"Python Django": "python",
-								"Ruby on Rails": "ruby"
-							},
-							"sublimelinter_wrap_find": true,
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 7,
-					"file": "partials/category-detail.html",
-					"settings":
-					{
-						"buffer_size": 627,
+						"buffer_size": 3743,
 						"regions":
 						{
 						},
@@ -1218,6 +805,7 @@
 								"README",
 								"FIXME"
 							],
+							"color_scheme": "Packages/User/Color Highlighter/themes/Monokai Bright.tmTheme",
 							"csslint_options":
 							{
 								"adjoining-classes": "warning",
@@ -1302,123 +890,6 @@
 							},
 							"sublimelinter_wrap_find": true,
 							"syntax": "Packages/AngularJS/AngularJS.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 8,
-					"file": "js/domain-classes.js",
-					"settings":
-					{
-						"buffer_size": 8563,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								393,
-								393
-							]
-						],
-						"settings":
-						{
-							"annotations":
-							[
-								"TODO",
-								"README",
-								"FIXME"
-							],
-							"csslint_options":
-							{
-								"adjoining-classes": "warning",
-								"box-model": true,
-								"box-sizing": "warning",
-								"compatible-vendor-prefixes": "warning",
-								"display-property-grouping": true,
-								"duplicate-background-images": "warning",
-								"duplicate-properties": true,
-								"empty-rules": true,
-								"errors": true,
-								"fallback-colors": "warning",
-								"floats": "warning",
-								"font-faces": "warning",
-								"font-sizes": "warning",
-								"gradients": "warning",
-								"ids": "warning",
-								"import": "warning",
-								"important": "warning",
-								"known-properties": true,
-								"outline-none": "warning",
-								"overqualified-elements": "warning",
-								"qualified-headings": "warning",
-								"regex-selectors": "warning",
-								"rules-count": "warning",
-								"shorthand": "warning",
-								"star-property-hack": "warning",
-								"text-indent": "warning",
-								"underscore-property-hack": "warning",
-								"unique-headings": "warning",
-								"universal-selector": "warning",
-								"vendor-prefix": true,
-								"zero-units": "warning"
-							},
-							"gjslint_ignore":
-							[
-								110
-							],
-							"gjslint_options":
-							[
-							],
-							"javascript_linter": "jshint",
-							"jshint_options":
-							{
-								"browser": true,
-								"evil": true,
-								"regexdash": true,
-								"sub": true,
-								"trailing": true,
-								"wsh": true
-							},
-							"pep8": true,
-							"pep8_ignore":
-							[
-								"E501"
-							],
-							"perl_linter": "perlcritic",
-							"pyflakes_ignore":
-							[
-							],
-							"pyflakes_ignore_import_*": true,
-							"sublimelinter": true,
-							"sublimelinter_delay": 2,
-							"sublimelinter_disable":
-							[
-							],
-							"sublimelinter_executable_map":
-							{
-							},
-							"sublimelinter_fill_outlines": false,
-							"sublimelinter_gutter_marks": true,
-							"sublimelinter_gutter_marks_theme": "simple",
-							"sublimelinter_mark_style": "none",
-							"sublimelinter_notes": false,
-							"sublimelinter_objj_check_ascii": false,
-							"sublimelinter_popup_errors_on_save": false,
-							"sublimelinter_syntax_map":
-							{
-								"C++": "c",
-								"Python Django": "python",
-								"Ruby on Rails": "ruby"
-							},
-							"sublimelinter_wrap_find": true,
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
 							"tab_size": 4,
 							"translate_tabs_to_spaces": true
 						},
@@ -1473,8 +944,24 @@
 		"selected_items":
 		[
 			[
+				"feed",
+				"js/controllers/feedback.js"
+			],
+			[
 				"doma",
 				"js/domain-classes.js"
+			],
+			[
+				"feedback",
+				"partials/feedback-list.html"
+			],
+			[
+				"people",
+				"js/controllers/people.js"
+			],
+			[
+				"feedback-li",
+				"partials/feedback-list.html"
 			],
 			[
 				"index",
@@ -1543,6 +1030,6 @@
 	"show_open_files": true,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 254.0,
+	"side_bar_width": 221.0,
 	"status_bar_visible": true
 }

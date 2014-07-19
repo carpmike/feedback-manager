@@ -3,19 +3,19 @@
         <div class="col-sm-5">
             <h3>Feedback for your people...</h3>
         </div>
-        <div class="col-sm-2">
-            <button class="btn btn-default btn-sm header-button" ng-click="openForm()">New Feedback</button>
+        <div class="col-sm-offset-5 col-sm-2">
+            <button class="btn btn-success btn-sm header-button" ng-click="openForm()">New Feedback</button>
         </div>
     </div>    
         
     <div class="container" id="feedback-filters">
-        <div class="row form-group">
+        <div class="row">
             <label for="searchBox" class="col-sm-1 control-label">Limit by</label>
             <div class="col-sm-4">
                 <input id="searchBox" type="text" ng-model="search.$" class="form-control" />
             </div>
         </div>
-        <div class="row form-group">
+        <div class="row">
             <label for="feedbackDate" class="col-sm-1 control-label">Since</label>
             <div class="col-sm-4">
                 <p class="input-group">
@@ -24,6 +24,13 @@
                     <button class="btn btn-default" ng-click="open($event)"><i class="glyphicon glyphicon-calendar"></i></button>
                   </span>
                 </p>
+            </div>
+        </div>
+        <div class="row" id="filter-group">
+            <div class="btn-group">
+                <label class="btn btn-default btn-sm" ng-model="radioModel" btn-radio="'Left'"   ng-click="givenFilter = {given: false}">Feedback that has not been given</label>
+                <label class="btn btn-default btn-sm" ng-model="radioModel" btn-radio="'Middle'" ng-click="givenFilter = {given: true}" >Feedback that has been given</label>
+                <label class="btn btn-default btn-sm" ng-model="radioModel" btn-radio="'Right'"  ng-click="givenFilter = null"          >All feedback</label>
             </div>
         </div>
     </div>  
@@ -37,9 +44,10 @@
                     <th>Category</th>
                     <th>Text</th>
                     <th>Date</th>
+                    <th>Given</th>
                     <th>Action</th>
                 </tr>
-                <tr ng-repeat="fb in feedback | orderBy:'-date' | filter: search | dateRangeSince: feedbackDate">
+                <tr ng-repeat="fb in feedback | orderBy:'-date' | filter: search | filter: givenFilter | dateRangeSince: feedbackDate">
                     <td>
                         {{fb.person.firstName}} {{fb.person.lastName}}
                     </td>
@@ -54,6 +62,9 @@
                     </td>
                     <td>
                         {{fb.date | date:'M/d/yyyy'}}
+                    </td>
+                    <td>
+                        {{fb.given | yesNoFilter}}
                     </td>
                     <td>
                         <button class="btn btn-default btn-sm" ng-click="editForm(fb.id)">Edit</button>

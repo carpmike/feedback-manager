@@ -4,6 +4,8 @@ var feedbackController = angular.module('myApp.controller.feedback', [])
             $scope.feedback = results;
         });
 
+        $scope.radioModel = 'Right';
+
         $scope.openForm = function() {
             $location.url('/feedback/0');
         };
@@ -83,9 +85,16 @@ var feedbackController = angular.module('myApp.controller.feedback', [])
 
             $scope.opened = true;
         };
+        
+        $scope.gaveFeedback = function() {
+            $scope.fb.given = true;
+            $log.info("gave fb: " + $scope.fb.id + " given: " + $scope.fb.given);
+            $scope.save($scope.fb);
+        };
 
         $scope.save = function(fb) {
             $log.info("saving fb: " + fb.id + " text: " + fb.text);
+            if (fb.given !== true) fb.given = false;
             feedbacks.saveFeedback(fb).then(function(results) {
                 $rootScope.$broadcast('event:alert-success', 'Successfully saved feedback!');
             }, function(results) {

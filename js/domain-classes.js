@@ -14,7 +14,7 @@ function findInList(list, id) {
 }
 
 var fbURL = 'http://feedback-web.carpmike.cloudbees.net';
-// var fbURL = 'http://localhost:8080/feedback-web'
+// var fbURL = 'http://localhost:8080/feedback-web';
 var to = 2000; // 2 second timeout
 
 angular.module('myApp.domainClasses', [])
@@ -112,7 +112,7 @@ angular.module('myApp.domainClasses', [])
         var feedbacks = {
             // returns a promise to get the feedback
             getFeedback: function(fbId) {
-                var feedbackPromise = $http.get(fbURL + '/feedbacks/' + (fbId ? fbId : ''))
+                var feedbackPromise = $http.get(fbURL + '/feedbacks/' + (fbId ? fbId : '') + '?max=100')
                     .then(function(results){
                         //Success;
                         console.log("Success: " + results.status);

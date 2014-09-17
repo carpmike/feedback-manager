@@ -1,23 +1,26 @@
 <div class="container">
     <div class="row">
-        <div class="col-sm-5">
+        <div class="col-md-5 col-sm-7 col-xs-9">
             <h3>Feedback for your people...</h3>
         </div>
-        <div class="col-sm-offset-5 col-sm-2">
-            <button class="btn btn-success btn-sm header-button" ng-click="openForm()">New Feedback</button>
+        <div class="col-md-offset-5 col-md-2 col-sm-offset-3 col-sm-2 col-xs-3">
+            <button class="btn btn-success btn-sm header-button" ng-click="openForm('feedbackPerson')">New Feedback</button>
         </div>
     </div>    
         
-    <div class="container" id="feedback-filters">
+    <div id="feedback-filters">
         <div class="row">
-            <label for="searchBox" class="col-sm-1 control-label">Limit by</label>
-            <div class="col-sm-4">
+            <label for="searchBox" class="col-sm-1 col-xs-2 control-label">Limit by</label>
+            <div class="col-sm-4 col-xs-6">
                 <input id="searchBox" type="text" ng-model="search.$" class="form-control" />
+            </div>
+            <div>
+                <button popover-placement="right" popover="Type some text the box to limit what you see. If that text is in any of the columns below, only that row will display. For example, to see only Joe Smith's feedback, just type Joe Smith in the box." class="btn btn-default"><i class="glyphicon glyphicon-info-sign"></i></button>
             </div>
         </div>
         <div class="row">
-            <label for="feedbackDate" class="col-sm-1 control-label">Since</label>
-            <div class="col-sm-4">
+            <label for="feedbackDate" class="col-sm-1 col-xs-2 control-label">Since</label>
+            <div class="col-sm-4 col-xs-6">
                 <p class="input-group">
                   <input id="feedbackDate" type="text" class="form-control" datepicker-popup="dd-MMMM-yyyy" ng-model="feedbackDate" is-open="opened" close-text="Close" />
                   <span class="input-group-btn">
@@ -27,10 +30,12 @@
             </div>
         </div>
         <div class="row" id="filter-group">
-            <div class="btn-group">
-                <label class="btn btn-default btn-sm" ng-model="radioModel" btn-radio="'Left'"   ng-click="givenFilter = {given: false}">Feedback that has not been given</label>
-                <label class="btn btn-default btn-sm" ng-model="radioModel" btn-radio="'Middle'" ng-click="givenFilter = {given: true}" >Feedback that has been given</label>
-                <label class="btn btn-default btn-sm" ng-model="radioModel" btn-radio="'Right'"  ng-click="givenFilter = null"          >All feedback</label>
+            <div class="col-sm-12 col-xs-12">
+                <div class="btn-group">
+                    <label class="btn btn-default btn-sm" ng-model="radioModel" btn-radio="'Left'"   ng-click="givenFilter = {given: false}">Feedback not yet given</label>
+                    <label class="btn btn-default btn-sm" ng-model="radioModel" btn-radio="'Middle'" ng-click="givenFilter = {given: true}" >Feedback already given</label>
+                    <label class="btn btn-default btn-sm" ng-model="radioModel" btn-radio="'Right'"  ng-click="givenFilter = null"          >All feedback</label>
+                </div>
             </div>
         </div>
     </div>  

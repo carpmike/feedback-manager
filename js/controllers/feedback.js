@@ -1,13 +1,17 @@
 var feedbackController = angular.module('myApp.controller.feedback', [])
-    .controller('FeedbackListCtrl', ['$scope', '$location', '$routeParams', 'feedbacks', function ($scope, $location, $routeParams, feedbacks) {
+    .controller('FeedbackListCtrl', ['$scope', '$location', '$routeParams', '$timeout','feedbacks', function ($scope, $location, $routeParams, $timeout, feedbacks) {
         feedbacks.getFeedback().then(function(results) {
             $scope.feedback = results;
         });
 
         $scope.radioModel = 'Right';
 
-        $scope.openForm = function() {
+        $scope.openForm = function(focusElement) {
             $location.url('/feedback/0');
+            $timeout(function() {
+                document.getElementById(focusElement).focus();
+                // the 400 is ms for the timeout to wait to fire until the page is rendered
+            }, 400);
         };
 
         $scope.editForm = function(feedbackId) {

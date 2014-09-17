@@ -10,7 +10,8 @@ var app = angular.module('myApp', [
     'myApp.controller.people',
     'myApp.controller.feedback',
     'myApp.controller.category',
-    'myApp.filters'
+    'myApp.filters',
+    'myApp.components'
 ]);
 app.config(['$routeProvider', function ($routeProvider) {
     $routeProvider.when('/people', {templateUrl: 'partials/people-list.html', controller: 'PeopleListCtrl'});

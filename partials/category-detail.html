@@ -6,12 +6,15 @@
         <div class="form-group">
             <label for="name" class="col-sm-2 control-label">Name</label>
             <div class="col-sm-4">
-                <input type="text" class="form-control" name="name" ng-model="category.name" required />
+                <input type="text" class="form-control" id="categoryName" name="name" ng-model="category.name" required />
             </div>
         </div>        
     </form>
 </div>
 <div class="modal-footer">
-    <button class="btn btn-primary" ng-click="ok()">Save</button>
+    <button class="btn btn-primary" ng-click="save()">Save</button>
     <button class="btn btn-warning" ng-click="cancel()">Cancel</button>
+    <span ng-if="category.id > 0">
+        <button class="btn btn-danger" ng-click="delete()">Delete</button>
+    </span>   
 </div>

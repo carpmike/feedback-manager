@@ -1,6 +1,6 @@
 var mainController = angular.module('myApp.controller.main', ['ngResource', 'http-auth-interceptor', 'LocalStorageModule'])
-    .controller('MainCtrl', ['$scope', '$rootScope', '$http', '$location', '$modal', '$resource', 'authService', 'localStorageService',
-        function ($scope, $rootScope, $http, $location, $modal, $resource, authService, localStorageService) {
+    .controller('MainCtrl', ['$scope', '$rootScope', '$http', '$location', '$resource', 'modal', 'authService', 'localStorageService',
+        function ($scope, $rootScope, $http, $location, $resource, modal, authService, localStorageService) {
         // set this in case there is a deep link - use it first, then remove it in "changePath"
         $scope.firstPath = $location.url();
         // tabs control what gets loaded in main content area
@@ -51,9 +51,11 @@ var mainController = angular.module('myApp.controller.main', ['ngResource', 'htt
 
             $rootScope.failedFirstTry = rejection.failedFirstTry;
 
-            var modalInstance = $modal.open({
+            var modalInstance = modal.openExtended({
                 templateUrl: 'partials/login-form.html',
-                controller: loginCtrl
+                controller: loginCtrl,
+                focus: "loginFormUsername",
+                backdrop: "static"
             });
 
             modalInstance.result.then(function (user) {
@@ -62,11 +64,11 @@ var mainController = angular.module('myApp.controller.main', ['ngResource', 'htt
                             {"ignoreAuthModule":true})
                     .success(function(results) {
                     
-                    console.log("auth token: " + results.token);
-                    $http.defaults.headers.common['x-auth-token'] = results.token;
+                    console.log("auth token: " + results.access_token);
+                    $http.defaults.headers.common['x-auth-token'] = results.access_token;
                     
                     // store the token in local storage
-                    localStorageService.set('FeedbockAuthToken', results.token);
+                    localStorageService.set('FeedbockAuthToken', results.access_token);
 
                     // notify login confirmed
                     authService.loginConfirmed();

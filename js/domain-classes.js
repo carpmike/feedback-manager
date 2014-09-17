@@ -59,6 +59,21 @@ angular.module('myApp.domainClasses', [])
                 }
 
                 return personPromise;
+            },
+            deletePerson: function(personId) {
+                if (!personId) return;
+                var personPromise = $http.delete(fbURL + '/persons/' + personId)
+                    .then(function(results){
+                        //Success;
+                        console.log("Success: " + results.status);
+                        return results.data;
+                    }, function(results){
+                        //error
+                        console.log("Error: " + results.status);
+                        return results.data;
+                    });
+
+                return personPromise;
             }
         };
 
@@ -68,7 +83,7 @@ angular.module('myApp.domainClasses', [])
         var categories = {
             // returns a promise to get the categories
             getCategories: function() {
-                var categoriesPromise = $http.get(fbURL + '/categories', { timeout: to })
+                var categoryPromise = $http.get(fbURL + '/categories', { timeout: to })
                     .then(function(results){
                         //Success;
                         console.log("Success: " + results.status);
@@ -79,7 +94,7 @@ angular.module('myApp.domainClasses', [])
                         return results.data;
                     });
 
-                return categoriesPromise;
+                return categoryPromise;
             },
             saveCategory: function(category) {
                 var categoryPromise;
@@ -101,6 +116,19 @@ angular.module('myApp.domainClasses', [])
                             return;
                         });
                 }
+
+                return categoryPromise;
+            },
+            deleteCategory: function(categoryId) {
+                if (!categoryId) return;
+                var categoryPromise = $http.delete(fbURL + '/categories/' + categoryId)
+                    .then(function(results){
+                        console.log("Success: " + results.status);
+                        return results.data;
+                    }, function(results){
+                        console.log("Error: " + results.status);
+                        return results.data;
+                    });
 
                 return categoryPromise;
             }

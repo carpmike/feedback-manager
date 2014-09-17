@@ -29,6 +29,10 @@ ul {
 	margin-bottom: 10px;
 }
 
+#feedback-filters {
+	margin-bottom: 15px;
+}
+
 #feedback-filters label {
 	margin-right: 3px;
 }
@@ -53,4 +57,8 @@ ul {
 .form.readonly {
 	padding-top: 7px;
 	padding-left: 29px;
+}
+
+.fivepx-bottom {
+	margin-bottom: 5px;
 }

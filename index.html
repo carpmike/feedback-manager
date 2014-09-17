@@ -25,6 +25,7 @@
     <script src="js/auth.js"></script>
     <script src="js/domain-classes.js"></script>
     <script src="js/filters.js"></script>
+    <script src="js/components.js"></script>
     <script src="js/controllers/main.js"></script>
     <script src="js/controllers/people.js"></script>
     <script src="js/controllers/feedback.js"></script>
@@ -39,18 +40,20 @@
     <header>
         <div class="container">
             <div id="main-header" class="row">
-                <div class="col-md-1">
+                <div class="col-md-1 col-sm-1 col-xs-1">
                     <img class="header-img" src="img/feedbock-chick-50.png"/>
                 </div>
-                <div class="col-md-10" class="text-left">
+                <div class="col-md-10 col-sm-10 col-xs-10" class="text-left">
                     <h1>Feedbock ... grow your peeps</h1>
                 </div>
-                <div class="col-md-1">
+                <div class="col-md-1 col-sm-1 col-xs-1">
                     <a href="http://m.feedbock.co"><img class="header-img" src="//cdnjs.cloudflare.com/ajax/libs/topcoat-icons/0.2.0/svg/phone.svg"/></a>
                 </div>
             </div>
+        </div>
+        <div class="container">
             <div id="tabs" class="row">
-                <div class="col-md-12">
+                <div class="col-md-12 col-sm-12">
                     <tabset justified="true">
                         <tab heading="Feedback" select="changePath('/feedback')"></tab>
                         <tab heading="People" select="changePath('/people')"></tab>

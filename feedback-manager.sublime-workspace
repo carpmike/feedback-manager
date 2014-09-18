@@ -36,18 +36,34 @@
 	"buffers":
 	[
 		{
-			"file": "js/controllers/people.js",
+			"file": "partials/feedback-form.html",
 			"settings":
 			{
-				"buffer_size": 2563,
+				"buffer_size": 3743,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "partials/people-detail.html",
+			"file": "js/controllers/feedback.js",
 			"settings":
 			{
-				"buffer_size": 1095,
+				"buffer_size": 5658,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": ".gitignore",
+			"settings":
+			{
+				"buffer_size": 39,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "partials/feedback-list.html",
+			"settings":
+			{
+				"buffer_size": 3807,
 				"line_ending": "Windows"
 			}
 		},
@@ -60,26 +76,10 @@
 			}
 		},
 		{
-			"file": "js/controllers/main.js",
+			"file": "js/domain-classes.js",
 			"settings":
 			{
-				"buffer_size": 3996,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "js/controllers/category.js",
-			"settings":
-			{
-				"buffer_size": 2538,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "partials/category-detail.html",
-			"settings":
-			{
-				"buffer_size": 772,
+				"buffer_size": 9763,
 				"line_ending": "Windows"
 			}
 		}
@@ -144,14 +144,17 @@
 	},
 	"file_history":
 	[
+		"/C/Working/Projects/mine/feedback-manager/js/controllers/people.js",
+		"/C/Working/Projects/mine/feedback-manager/partials/people-detail.html",
+		"/C/Working/Projects/mine/feedback-manager/js/components.js",
+		"/C/Working/Projects/mine/feedback-manager/js/controllers/main.js",
+		"/C/Working/Projects/mine/feedback-manager/js/controllers/category.js",
+		"/C/Working/Projects/mine/feedback-manager/partials/category-detail.html",
 		"/C/Working/Projects/mine/feedback-manager/index.html",
 		"/C/Working/Projects/mine/feedback-manager/js/auth.js",
-		"/C/Working/Projects/mine/feedback-manager/js/components.js",
 		"/C/Working/Projects/mine/feedback-manager/js/app.js",
 		"/C/Working/Projects/mine/feedback-manager/partials/login-form.html",
-		"/C/Working/Projects/mine/feedback-manager/js/controllers/main.js",
 		"/C/Working/Projects/mine/feedback-manager/js/directives.js",
-		"/C/Working/Projects/mine/feedback-manager/partials/people-detail.html",
 		"/C/Working/Projects/mine/feedback-manager/partials/feedback-list.html",
 		"/C/Working/Projects/mine/feedback-manager/partials/people-list.html",
 		"/C/Working/Projects/mine/feedback-manager/partials/category-list.html",
@@ -160,10 +163,7 @@
 		"/C/Working/Projects/mine/feedback-manager/css/styles.css",
 		"/C/Working/Projects/mine/feedback-manager/js/services.js",
 		"/C/Working/Projects/mine/feedback-manager/js/filters.js",
-		"/C/Working/Projects/mine/feedback-manager/js/controllers/people.js",
 		"/C/Working/Projects/mine/feedback-manager/partials/feedback-form.html",
-		"/C/Working/Projects/mine/feedback-manager/partials/category-detail.html",
-		"/C/Working/Projects/mine/feedback-manager/js/controllers/category.js",
 		"/C/Working/Projects/mine/feedback-manager/js/controllers/feedback.js",
 		"/C/Working/Projects/mine/feedback-manager/package.json",
 		"/C/Working/Web/APIs/twitter-bootstrap.3.1.0/bootstrap.css",
@@ -391,52 +391,23 @@
 	"groups":
 	[
 		{
-			"selected": 4,
+			"selected": 5,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "js/controllers/people.js",
+					"file": "partials/feedback-form.html",
 					"settings":
 					{
-						"buffer_size": 2563,
+						"buffer_size": 3743,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								417,
-								399
-							]
-						],
-						"settings":
-						{
-							"color_scheme": "Packages/User/Color Highlighter/themes/Monokai.tmTheme",
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "partials/people-detail.html",
-					"settings":
-					{
-						"buffer_size": 1095,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								253,
-								253
+								820,
+								834
 							]
 						],
 						"settings":
@@ -453,7 +424,92 @@
 					"type": "text"
 				},
 				{
+					"buffer": 1,
+					"file": "js/controllers/feedback.js",
+					"settings":
+					{
+						"buffer_size": 5658,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								667,
+								667
+							]
+						],
+						"settings":
+						{
+							"color_scheme": "Packages/User/Color Highlighter/themes/Monokai.tmTheme",
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
 					"buffer": 2,
+					"file": ".gitignore",
+					"settings":
+					{
+						"buffer_size": 39,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								39,
+								39
+							]
+						],
+						"settings":
+						{
+							"color_scheme": "Packages/User/Color Highlighter/themes/Monokai.tmTheme",
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "partials/feedback-list.html",
+					"settings":
+					{
+						"buffer_size": 3807,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								339,
+								339
+							]
+						],
+						"settings":
+						{
+							"color_scheme": "Packages/User/Color Highlighter/themes/Monokai.tmTheme",
+							"syntax": "Packages/AngularJS/AngularJS.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
 					"file": "js/components.js",
 					"settings":
 					{
@@ -464,8 +520,8 @@
 						"selection":
 						[
 							[
-								563,
-								563
+								0,
+								0
 							]
 						],
 						"settings":
@@ -482,83 +538,25 @@
 					"type": "text"
 				},
 				{
-					"buffer": 3,
-					"file": "js/controllers/main.js",
-					"settings":
-					{
-						"buffer_size": 3996,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								861,
-								861
-							]
-						],
-						"settings":
-						{
-							"color_scheme": "Packages/User/Color Highlighter/themes/Monokai.tmTheme",
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "js/controllers/category.js",
-					"settings":
-					{
-						"buffer_size": 2538,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								585,
-								585
-							]
-						],
-						"settings":
-						{
-							"color_scheme": "Packages/User/Color Highlighter/themes/Monokai.tmTheme",
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
 					"buffer": 5,
-					"file": "partials/category-detail.html",
+					"file": "js/domain-classes.js",
 					"settings":
 					{
-						"buffer_size": 772,
+						"buffer_size": 9763,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								350,
-								362
+								307,
+								307
 							]
 						],
 						"settings":
 						{
 							"color_scheme": "Packages/User/Color Highlighter/themes/Monokai.tmTheme",
-							"syntax": "Packages/AngularJS/AngularJS.tmLanguage",
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
 							"tab_size": 4,
 							"translate_tabs_to_spaces": true
 						},

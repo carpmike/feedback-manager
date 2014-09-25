@@ -31,12 +31,14 @@ var categoryController = angular.module('myApp.controller.category', [])
                         $rootScope.$broadcast('event:alert-failure', 'Failed to save ' + category.name + '! Problem is ' + results.status + '.');
                     });
                 } else if (action === "delete") {
-                    categories.deleteCategory(category.id).then(function(results) {
-                        $route.reload();
-                        $rootScope.$broadcast('event:alert-success', 'Successfully deleted category!');
-                    }, function(results) {
-                        $rootScope.$broadcast('event:alert-failure', 'Failed to delete category! Problem is ' + results.status + '.');
-                    });
+                    if (confirm("Are you sure you want to delete this category?")) {
+                        categories.deleteCategory(category.id).then(function(results) {
+                            $route.reload();
+                            $rootScope.$broadcast('event:alert-success', 'Successfully deleted category!');
+                        }, function(results) {
+                            $rootScope.$broadcast('event:alert-failure', 'Failed to delete category! Problem is ' + results.status + '.');
+                        });
+                    }
                 }
 
             });

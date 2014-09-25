@@ -2,7 +2,7 @@
     <h2>Edit your peep...</h2>
 </div>
 <div class="container">
-	<form class="form-horizontal" role="form" novalidate>
+	<form class="form-horizontal css-form" name="personForm" role="form" novalidate>
         <div class="form-group">
             <label for="firstName" class="col-sm-2 control-label">First name</label>
             <div class="col-sm-4">
@@ -18,7 +18,7 @@
     </form>
 </div>
 <div class="modal-footer">
-    <button class="btn btn-primary" ng-click="save()">Save</button>
+    <button class="btn btn-primary" ng-click="save(personForm)">Save</button>
     <button class="btn btn-warning" ng-click="cancel()">Cancel</button>
     <span ng-if="person.id > 0">
         <button class="btn btn-danger" ng-click="delete()">Delete</button>

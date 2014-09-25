@@ -32,12 +32,14 @@ var peopleController = angular.module('myApp.controller.people', [])
                         $rootScope.$broadcast('event:alert-failure', 'Failed to save ' + person.firstName + ' ' + person.lastName + '! Problem is ' + results.status + '.');
                     });
                 } else if (action === "delete") {
-                    people.deletePerson(person.id).then(function(results) {
-                        $route.reload();
-                        $rootScope.$broadcast('event:alert-success', 'Successfully deleted person!');
-                    }, function(results) {
-                        $rootScope.$broadcast('event:alert-failure', 'Failed to delete person! Problem is ' + results.status + '.');
-                    });
+                    if (confirm("Are you sure you want to delete " + person.firstName + " " + person.lastName + "?")) {
+                        people.deletePerson(person.id).then(function(results) {
+                            $route.reload();
+                            $rootScope.$broadcast('event:alert-success', 'Successfully deleted person!');
+                        }, function(results) {
+                            $rootScope.$broadcast('event:alert-failure', 'Failed to delete person! Problem is ' + results.status + '.');
+                        });
+                    }
                 }
             });
         };
@@ -48,8 +50,10 @@ var personDetailCtrl = function ($scope, $modalInstance, person) {
     if (!person) person = {"firstName":"", "lastName":""};
     $scope.person = person;
 
-    $scope.save = function() {
-        $modalInstance.close([$scope.person, "save"]);
+    $scope.save = function(form) {
+        if(!form.$invalid) {
+            $modalInstance.close([$scope.person, "save"]);
+        }   
     };
 
     $scope.delete = function() {

@@ -59,6 +59,12 @@ ul {
 	padding-left: 29px;
 }
 
+.css-form input.ng-invalid.ng-dirty {
+	background-color: #d2322d;
+}
+
+/* singletons */
+
 .fivepx-bottom {
 	margin-bottom: 5px;
 }

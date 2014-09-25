@@ -107,10 +107,12 @@ var feedbackController = angular.module('myApp.controller.feedback', [])
         };
 
         $scope.delete = function(fb) {
-            $log.info("deleting fb: " + fb.id);
-            feedbacks.deleteFeedback(fb.id).then(function(results) {
-                $scope.returnToList();
-            });
+            if (confirm("Are you sure you want to delete this feedback?")) {
+                $log.info("deleting fb: " + fb.id);
+                feedbacks.deleteFeedback(fb.id).then(function(results) {
+                    $scope.returnToList();
+                });
+            }
         };
 
         // $scope.reset = function() {

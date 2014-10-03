@@ -13,7 +13,7 @@ function findInList(list, id) {
     return it;
 }
 
-var fbURL = 'http://feedback-web.carpmike.cloudbees.net';
+var fbURL = 'http://feedbock.elasticbeanstalk.com';
 // var fbURL = 'http://localhost:8080/feedback-web';
 var to = 2000; // 2 second timeout
 

@@ -1,6 +1,6 @@
 var mainController = angular.module('myApp.controller.main', ['ngResource', 'http-auth-interceptor', 'LocalStorageModule'])
-    .controller('MainCtrl', ['$scope', '$rootScope', '$http', '$location', '$resource', 'modal', 'authService', 'localStorageService',
-        function ($scope, $rootScope, $http, $location, $resource, modal, authService, localStorageService) {
+    .controller('MainCtrl', ['$scope', '$rootScope', '$http', '$location', '$resource', 'modal', 'authService', 'localStorageService', 'users',
+        function ($scope, $rootScope, $http, $location, $resource, modal, authService, localStorageService, users) {
         // set this in case there is a deep link - use it first, then remove it in "changePath"
         $scope.firstPath = $location.url();
         // tabs control what gets loaded in main content area
@@ -21,8 +21,8 @@ var mainController = angular.module('myApp.controller.main', ['ngResource', 'htt
             $rootScope.alerts.push({type: 'success', msg: message});
         });
 
-        $rootScope.$on('event:alert-failure', function() {
-
+        $rootScope.$on('event:alert-failure', function(event, message) {
+            $rootScope.alerts.push({type: 'danger', msg: message});
         });
 
         $rootScope.addAlert = function() {
@@ -58,25 +58,40 @@ var mainController = angular.module('myApp.controller.main', ['ngResource', 'htt
                 backdrop: "static"
             });
 
-            modalInstance.result.then(function (user) {
+            var login = function(user) {
                 $http.post(fbURL + '/api/login',
-                            {"username":user.username, "password":user.password},
-                            {"ignoreAuthModule":true})
+                    {"username":user.username, "password":user.password},
+                    {"ignoreAuthModule":true})
                     .success(function(results) {
-                    
-                    console.log("auth token: " + results.access_token);
-                    $http.defaults.headers.common['x-auth-token'] = results.access_token;
-                    
-                    // store the token in local storage
-                    localStorageService.set('FeedbockAuthToken', results.access_token);
+                        console.log("auth token: " + results.access_token);
+                        $http.defaults.headers.common['x-auth-token'] = results.access_token;
+                        
+                        // store the token in local storage
+                        localStorageService.set('FeedbockAuthToken', results.access_token);
 
-                    // notify login confirmed
-                    authService.loginConfirmed();
-                })
-                .error(function(data,status) {
-                    console.log("got a failure when trying to authenticate: " + status);
-                    $rootScope.$broadcast('event:auth-loginRequired', {"status":status, "failedFirstTry":true});
-                });
+                        // notify login confirmed
+                        authService.loginConfirmed();
+                    })
+                    .error(function(data,status) {
+                        console.log("got a failure when trying to authenticate: " + status);
+                        $rootScope.$broadcast('event:auth-loginRequired', {"status":status, "failedFirstTry":true});
+                    });
+            };
+
+            modalInstance.result.then(function (data) {
+                user = data[0];
+                action = data[1];
+                $scope.user = data[0];
+                if (action === "login") {
+                    login(user);
+                } else if (action === "create") {
+                    users.createUser(user).then(function(results) {
+                        login(user);
+                        $rootScope.$broadcast('event:alert-success', 'Awesome! You\'re in! Now add some people and categories. Then you can start adding feedback from here or from the mobile app (m.feedbock.co)!');
+                    }, function(results) {
+                        $rootScope.$broadcast('event:alert-failure', 'Failed to create \'' + user.username + '\' with email \'' + user.email + '\'! Someone has already chosen this username or there is already an account with this email address. Refresh the page and try a new username. If that doesn\'t work, send an email to \'admin@feedbock.co\'.');
+                    });
+                }
             });
         });
     }]);
@@ -88,6 +103,10 @@ var loginCtrl = function ($scope, $modalInstance, $http, localStorageService) {
     console.log("failed first try? " + $scope.failedFirstTry);
 
     $scope.login = function() {
-        $modalInstance.close($scope.user);
+        $modalInstance.close([$scope.user, "login"]);
     };
+
+    $scope.create = function() {
+        $modalInstance.close([$scope.user, "create"]);
+    }
 };

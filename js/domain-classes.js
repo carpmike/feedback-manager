@@ -13,8 +13,8 @@ function findInList(list, id) {
     return it;
 }
 
-var fbURL = 'http://feedbock.elasticbeanstalk.com';
-// var fbURL = 'http://localhost:8080/feedback-web';
+// var fbURL = 'http://feedbock.elasticbeanstalk.com';
+var fbURL = 'http://localhost:8080/feedback-web';
 var to = 2000; // 2 second timeout
 
 angular.module('myApp.domainClasses', [])
@@ -23,7 +23,7 @@ angular.module('myApp.domainClasses', [])
         var people = {
             // returns a promise to get the people
             getPeople: function() {
-                var peoplePromise = $http.get(fbURL + '/persons?max=50', { timeout: to })
+                var peoplePromise = $http.get(fbURL + '/api/persons?max=50', { timeout: to })
                     .then(function(results){
                         //Success;
                         console.log(":FB:Success: " + results.status);
@@ -39,7 +39,7 @@ angular.module('myApp.domainClasses', [])
             savePerson: function(person) {
                 var personPromise;
                 if (person.id) {
-                    personPromise = $http.put(fbURL + '/persons/' + person.id, person, { timeout: to })
+                    personPromise = $http.put(fbURL + '/api/persons/' + person.id, person, { timeout: to })
                         .success(function(results){
                             console.log("Success: " + results.status);
                             return results.data;
@@ -48,7 +48,7 @@ angular.module('myApp.domainClasses', [])
                             return results.data;
                         });
                 } else {
-                    personPromise = $http.post(fbURL + '/persons', person, { timeout: to })
+                    personPromise = $http.post(fbURL + '/api/persons', person, { timeout: to })
                         .success(function(results){
                             console.log("Success: " + results.status);
                             return results.data;
@@ -62,7 +62,7 @@ angular.module('myApp.domainClasses', [])
             },
             deletePerson: function(personId) {
                 if (!personId) return;
-                var personPromise = $http.delete(fbURL + '/persons/' + personId)
+                var personPromise = $http.delete(fbURL + '/api/persons/' + personId)
                     .then(function(results){
                         //Success;
                         console.log("Success: " + results.status);
@@ -79,11 +79,31 @@ angular.module('myApp.domainClasses', [])
 
         return people;
     }])
+    .factory('users', ['$http', function ($http) {
+
+        var users = {
+            createUser: function(user) {
+                var userPromise;
+                userPromise = $http.post(fbURL + '/api/guest/users', user, { timeout: to })
+                    .success(function(results){
+                        console.log("Success: " + results.status);
+                        return results.data;
+                    }).error(function(results, status){
+                        console.log("Failed to create " + user.username + ". HTTP status: " + status);
+                        return;
+                    });
+
+                return userPromise;
+            }
+        };
+
+        return users;
+    }])
     .factory('categories', ['$http', function ($http) {
         var categories = {
             // returns a promise to get the categories
             getCategories: function() {
-                var categoryPromise = $http.get(fbURL + '/categories', { timeout: to })
+                var categoryPromise = $http.get(fbURL + '/api/categories', { timeout: to })
                     .then(function(results){
                         //Success;
                         console.log("Success: " + results.status);
@@ -99,7 +119,7 @@ angular.module('myApp.domainClasses', [])
             saveCategory: function(category) {
                 var categoryPromise;
                 if (category.id) {
-                    categoryPromise = $http.put(fbURL + '/categories/' + category.id, category, { timeout: to })
+                    categoryPromise = $http.put(fbURL + '/api/categories/' + category.id, category, { timeout: to })
                         .success(function(results){
                             console.log("Success: " + results.status);
                             return results.data;
@@ -107,7 +127,7 @@ angular.module('myApp.domainClasses', [])
                             return results;
                         });
                 } else {
-                    categoryPromise = $http.post(fbURL + '/categories', category, { timeout: to })
+                    categoryPromise = $http.post(fbURL + '/api/categories', category, { timeout: to })
                         .success(function(results){
                             console.log("Success: " + results.status);
                             return results.data;
@@ -121,7 +141,7 @@ angular.module('myApp.domainClasses', [])
             },
             deleteCategory: function(categoryId) {
                 if (!categoryId) return;
-                var categoryPromise = $http.delete(fbURL + '/categories/' + categoryId)
+                var categoryPromise = $http.delete(fbURL + '/api/categories/' + categoryId)
                     .then(function(results){
                         console.log("Success: " + results.status);
                         return results.data;
@@ -140,7 +160,7 @@ angular.module('myApp.domainClasses', [])
         var feedbacks = {
             // returns a promise to get the feedback
             getFeedback: function(fbId) {
-                var feedbackPromise = $http.get(fbURL + '/feedbacks/' + (fbId ? fbId : '') + '?max=100')
+                var feedbackPromise = $http.get(fbURL + '/api/feedbacks' + (fbId ? ('/' + fbId) : '') + '?max=100')
                     .then(function(results){
                         //Success;
                         console.log("Success: " + results.status);
@@ -157,7 +177,7 @@ angular.module('myApp.domainClasses', [])
                 var putOrPost = $http.put;
                 if (!fb.id) putOrPost = $http.post;
 
-                var feedbackPromise = putOrPost(fbURL + '/feedbacks/' + (fb.id ? fb.id : ''), fb)
+                var feedbackPromise = putOrPost(fbURL + '/api/feedbacks/' + (fb.id ? fb.id : ''), fb)
                     .then(function(results){
                         console.log("Success: " + results.status);
                         return results.data;
@@ -170,7 +190,7 @@ angular.module('myApp.domainClasses', [])
             },
             deleteFeedback: function(fbId) {
                 if (!fbId) return;
-                var feedbackPromise = $http.delete(fbURL + '/feedbacks/' + fbId)
+                var feedbackPromise = $http.delete(fbURL + '/api/feedbacks/' + fbId)
                     .then(function(results){
                         //Success;
                         console.log("Success: " + results.status);
@@ -191,7 +211,7 @@ angular.module('myApp.domainClasses', [])
         var feedbackTypes = {
             // returns a promise to get the feedbackTypes
             getFeedbackTypes: function() {
-                var feedbackTypesPromise = $http.get(fbURL + '/feedbackTypes', { cache: true, timeout: to })
+                var feedbackTypesPromise = $http.get(fbURL + '/api/feedbackTypes', { cache: true, timeout: to })
                     .then(function(results){
                         //Success;
                         console.log("Success: " + results.status);

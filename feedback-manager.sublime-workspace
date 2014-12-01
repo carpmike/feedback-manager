@@ -36,34 +36,10 @@
 	"buffers":
 	[
 		{
-			"file": "partials/people-detail.html",
+			"file": "js/domain-classes.js",
 			"settings":
 			{
-				"buffer_size": 1148,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "js/controllers/people.js",
-			"settings":
-			{
-				"buffer_size": 2613,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "css/styles.css",
-			"settings":
-			{
-				"buffer_size": 921,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "partials/category-detail.html",
-			"settings":
-			{
-				"buffer_size": 788,
+				"buffer_size": 9757,
 				"line_ending": "Windows"
 			}
 		},
@@ -71,7 +47,23 @@
 			"file": "partials/login-form.html",
 			"settings":
 			{
-				"buffer_size": 1073,
+				"buffer_size": 2196,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "js/controllers/main.js",
+			"settings":
+			{
+				"buffer_size": 4406,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "js/controllers/people.js",
+			"settings":
+			{
+				"buffer_size": 2779,
 				"line_ending": "Windows"
 			}
 		}
@@ -79,9 +71,21 @@
 	"build_system": "",
 	"command_palette":
 	{
-		"height": 58.0,
+		"height": 187.0,
 		"selected_items":
 		[
+			[
+				"html",
+				"Set Syntax: HTML"
+			],
+			[
+				"javasc",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"package",
+				"Package Control: Install Package"
+			],
 			[
 				"instal",
 				"Package Control: Install Package"
@@ -119,7 +123,7 @@
 				"View: Toggle Open Files in Side Bar"
 			]
 		],
-		"width": 472.0
+		"width": 530.0
 	},
 	"console":
 	{
@@ -136,6 +140,19 @@
 	},
 	"file_history":
 	[
+		"/Users/mike/my_dev/web/projects/feedback-manager/js/gdrive_files.js",
+		"/Users/mike/my_dev/web/projects/feedback-manager/partials/category-list.html",
+		"/Users/mike/my_dev/web/projects/feedback-manager/partials/category-detail.html",
+		"/Users/mike/my_dev/web/projects/feedback-manager/partials/feedback-form.html",
+		"/Users/mike/my_dev/web/projects/feedback-manager/js/domain-classes.js",
+		"/Users/mike/my_dev/web/projects/feedback-manager/js/controllers/feedback.js",
+		"/Users/mike/my_dev/web/projects/feedback-manager/js/controllers/category.js",
+		"/Users/mike/my_dev/web/projects/feedback-manager/partials/login-form.html",
+		"/Users/mike/my_dev/web/projects/feedback-manager/css/styles.css",
+		"/Users/mike/my_dev/web/projects/feedback-manager/js/controllers/people.js",
+		"/Users/mike/my_dev/web/projects/feedback-manager/partials/people-detail.html",
+		"/Users/mike/my_dev/web/projects/feedback-manager/js/app.js",
+		"/Users/mike/my_dev/web/projects/feedback-manager/js/auth.js",
 		"/C/Working/Projects/mine/feedback-manager/partials/feedback-form.html",
 		"/C/Working/Projects/mine/feedback-manager/js/controllers/feedback.js",
 		"/C/Working/Projects/mine/feedback-manager/.gitignore",
@@ -250,20 +267,7 @@
 		"/C/Working/Projects/mine/angular-phonecat/test/e2e/scenarios.js",
 		"/C/Working/Projects/mine/angular-phonecat/app/js/filters.js",
 		"/C/Working/Projects/mine/angular-phonecat/app/phones/dell-streak-7.json",
-		"/C/Users/mcarpenter/Desktop/GRF.java",
-		"/C/Users/mcarpenter/Desktop/eckr.osq",
-		"/C/Users/mcarpenter/Desktop/echk.osq",
-		"/C/Working/Projects/mine/angular-phonecat/app/css/bootstrap.css",
-		"/C/Working/Projects/mine/angular-phonecat/app/css/app.css",
-		"/C/Working/Projects/mine/phonegap-tutorial/tutorial-files/step4/js/index.js",
-		"/C/Users/mcarpenter/Desktop/commprocess.java",
-		"/C/Users/mcarpenter/Desktop/commence.java",
-		"/C/Users/mcarpenter/Desktop/rallyExcel - Copy.xml",
-		"/C/Working/Projects/mine/phonegap-tutorial/phonegap-start-master/phonegap-start-master/www/config.xml",
-		"/C/Users/mcarpenter/AppData/Roaming/Rally/ExcelAddIn/rallyExcel.xml",
-		"/C/Working/Projects/mine/sitter/web-app/js/sitter.js",
-		"/C/Working/Projects/mine/sitter/web-app/js/test.html",
-		"/C/Working/Projects/mine/sitter/web-app/css/main.css"
+		"/C/Users/mcarpenter/Desktop/GRF.java"
 	],
 	"find":
 	{
@@ -284,6 +288,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"login",
 			"        $scope.focusLoginUser = false;",
 			"appDirectives",
 			";\n",
@@ -383,29 +388,29 @@
 	"groups":
 	[
 		{
-			"selected": 2,
+			"selected": 3,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "partials/people-detail.html",
+					"file": "js/domain-classes.js",
 					"settings":
 					{
-						"buffer_size": 1148,
+						"buffer_size": 9757,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								143,
-								143
+								353,
+								353
 							]
 						],
 						"settings":
 						{
 							"color_scheme": "Packages/User/Color Highlighter/themes/Monokai.tmTheme",
-							"syntax": "Packages/AngularJS/AngularJS.tmLanguage",
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
 							"tab_size": 4,
 							"translate_tabs_to_spaces": true
 						},
@@ -417,18 +422,47 @@
 				},
 				{
 					"buffer": 1,
-					"file": "js/controllers/people.js",
+					"file": "partials/login-form.html",
 					"settings":
 					{
-						"buffer_size": 2613,
+						"buffer_size": 2196,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2317,
-								2317
+								997,
+								997
+							]
+						],
+						"settings":
+						{
+							"color_scheme": "Packages/User/Color Highlighter/themes/Monokai.tmTheme",
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "js/controllers/main.js",
+					"settings":
+					{
+						"buffer_size": 4406,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2774,
+								2774
 							]
 						],
 						"settings":
@@ -439,93 +473,36 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 420.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "css/styles.css",
-					"settings":
-					{
-						"buffer_size": 921,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								816,
-								816
-							]
-						],
-						"settings":
-						{
-							"color_scheme": "Packages/User/Color Highlighter/themes/Monokai.tmTheme",
-							"syntax": "Packages/CSS/CSS.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 840.0,
+						"translation.y": 718.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 3,
-					"file": "partials/category-detail.html",
+					"file": "js/controllers/people.js",
 					"settings":
 					{
-						"buffer_size": 788,
+						"buffer_size": 2779,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								40,
-								40
+								1091,
+								942
 							]
 						],
 						"settings":
 						{
 							"color_scheme": "Packages/User/Color Highlighter/themes/Monokai.tmTheme",
-							"syntax": "Packages/AngularJS/AngularJS.tmLanguage",
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
 							"tab_size": 4,
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "partials/login-form.html",
-					"settings":
-					{
-						"buffer_size": 1073,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1073,
-								1073
-							]
-						],
-						"settings":
-						{
-							"color_scheme": "Packages/User/Color Highlighter/themes/Monokai.tmTheme",
-							"syntax": "Packages/AngularJS/AngularJS.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 148.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -575,6 +552,18 @@
 		"selected_items":
 		[
 			[
+				"feed",
+				"js/controllers/feedback.js"
+			],
+			[
+				"people",
+				"js/controllers/people.js"
+			],
+			[
+				"category",
+				"js/controllers/category.js"
+			],
+			[
 				"doma",
 				"js/domain-classes.js"
 			],
@@ -583,16 +572,8 @@
 				"js/domain-classes.js"
 			],
 			[
-				"feed",
-				"js/controllers/feedback.js"
-			],
-			[
 				"feedback",
 				"partials/feedback-list.html"
-			],
-			[
-				"people",
-				"js/controllers/people.js"
 			],
 			[
 				"feedback-li",
